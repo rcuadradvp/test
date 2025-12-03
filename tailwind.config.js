@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: process.env.DARK_MODE ? process.env.DARK_MODE : 'class',
+  // ✅ MEJORADO: Usar 'class' para que funcione con CSS Variables
+  // Gluestack UI recomienda 'class' para mejor control del tema
+  darkMode: 'class',
+  
   content: [
     './app/**/*.{html,js,jsx,ts,tsx,mdx}',
     './components/**/*.{html,js,jsx,ts,tsx,mdx}',
@@ -8,17 +11,24 @@ module.exports = {
     './*.{html,js,jsx,ts,tsx,mdx}',
     './src/**/*.{html,js,jsx,ts,tsx,mdx}',
   ],
+  
   presets: [require('nativewind/preset')],
+  
   important: 'html',
+  
   safelist: [
     {
       pattern:
         /(bg|border|text|stroke|fill)-(primary|secondary|tertiary|error|success|warning|info|typography|outline|background|indicator)-(0|50|100|200|300|400|500|600|700|800|900|950|white|gray|black|error|warning|muted|success|info|light|dark|primary)/,
     },
   ],
+  
   theme: {
     extend: {
       colors: {
+        // ✅ Colores con CSS Variables - Cambian automáticamente con el tema
+        // NO necesitas usar "dark:" en las clases
+        // Ejemplo: bg-background-0 es blanco en light y negro en dark automáticamente
         primary: {
           0: 'rgb(var(--color-primary-0)/<alpha-value>)',
           50: 'rgb(var(--color-primary-50)/<alpha-value>)',

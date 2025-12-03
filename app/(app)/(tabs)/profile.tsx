@@ -215,7 +215,7 @@ export default function ProfileScreen() {
                   onPress={handleUploadAvatar}
                   className="absolute bottom-0 right-0 bg-primary-500 rounded-full p-2"
                 >
-                  <Icon as={Camera} size="xs" className="text-white" />
+                  <Icon as={Camera} size="xs"/>
                 </Pressable>
               </Box>
 
@@ -270,7 +270,7 @@ export default function ProfileScreen() {
                         </>
                       ) : (
                         <>
-                          <Icon as={Save} size="sm" className="text-white mr-2" />
+                          <Icon as={Save} size="sm" className="mr-2" />
                           <ButtonText>Guardar</ButtonText>
                         </>
                       )}

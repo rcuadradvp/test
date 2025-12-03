@@ -14,7 +14,7 @@ export default function AppLayout() {
   // Mostrar loading mientras verifica la sesión
   if (isInitializing) {
     return (
-      <View className="flex-1 items-center justify-center bg-white">
+      <View className="flex-1 items-center justify-center">
         <ActivityIndicator size="large" color="#0000ff" />
       </View>
     );
@@ -22,7 +22,7 @@ export default function AppLayout() {
 
   // Si no está autenticado, redirigir al login
   if (!isAuthenticated) {
-    return <Redirect href="/(public)/login" />;
+    return <Redirect href="/(public)" />;
   }
 
   // Si está autenticado, mostrar las rutas privadas

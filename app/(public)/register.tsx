@@ -8,6 +8,7 @@ import { Input, InputField } from '@/components/ui/input';
 import { VStack } from '@/components/ui/vstack';
 import { Box } from '@/components/ui/box';
 import { FormControl, FormControlLabel, FormControlLabelText } from '@/components/ui/form-control';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 /**
  * Pantalla de Registro
@@ -33,14 +34,22 @@ export default function RegisterScreen() {
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         keyboardShouldPersistTaps="handled"
+        className="bg-background-0 dark:bg-background-950"
       >
-        <View className="flex-1 bg-white">
+        <View className="flex-1">
+          {/* Theme Toggle en la esquina superior derecha */}
+          <View className="absolute top-12 right-6 z-10">
+            <ThemeToggle />
+          </View>
+
           <Box className="flex-1 justify-center p-6">
             <VStack space="xl" className="w-full max-w-md mx-auto">
               {/* Header */}
               <VStack space="sm">
-                <Heading size="2xl">Crear Cuenta</Heading>
-                <Text size="md" className="text-typography-500">
+                <Heading size="2xl" className="text-typography-900 dark:text-typography-50">
+                  Crear Cuenta
+                </Heading>
+                <Text size="md" className="text-typography-500 dark:text-typography-400">
                   Completa tus datos para comenzar
                 </Text>
               </VStack>
@@ -50,14 +59,18 @@ export default function RegisterScreen() {
                 {/* Name */}
                 <FormControl>
                   <FormControlLabel>
-                    <FormControlLabelText>Nombre Completo</FormControlLabelText>
+                    <FormControlLabelText className="text-typography-700 dark:text-typography-300">
+                      Nombre Completo
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input>
+                  <Input className="bg-background-50 dark:bg-background-900 border-outline-200 dark:border-outline-700">
                     <InputField
                       placeholder="Juan Pérez"
                       value={name}
                       onChangeText={setName}
                       autoCapitalize="words"
+                      className="text-typography-900 dark:text-typography-50"
+                      placeholderTextColor="#9CA3AF"
                     />
                   </Input>
                 </FormControl>
@@ -65,9 +78,11 @@ export default function RegisterScreen() {
                 {/* Email */}
                 <FormControl>
                   <FormControlLabel>
-                    <FormControlLabelText>Email</FormControlLabelText>
+                    <FormControlLabelText className="text-typography-700 dark:text-typography-300">
+                      Email
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input>
+                  <Input className="bg-background-50 dark:bg-background-900 border-outline-200 dark:border-outline-700">
                     <InputField
                       placeholder="usuario@ejemplo.com"
                       value={email}
@@ -75,6 +90,8 @@ export default function RegisterScreen() {
                       autoCapitalize="none"
                       autoCorrect={false}
                       keyboardType="email-address"
+                      className="text-typography-900 dark:text-typography-50"
+                      placeholderTextColor="#9CA3AF"
                     />
                   </Input>
                 </FormControl>
@@ -82,14 +99,18 @@ export default function RegisterScreen() {
                 {/* Password */}
                 <FormControl>
                   <FormControlLabel>
-                    <FormControlLabelText>Contraseña</FormControlLabelText>
+                    <FormControlLabelText className="text-typography-700 dark:text-typography-300">
+                      Contraseña
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input>
+                  <Input className="bg-background-50 dark:bg-background-900 border-outline-200 dark:border-outline-700">
                     <InputField
                       placeholder="••••••••"
                       value={password}
                       onChangeText={setPassword}
                       secureTextEntry
+                      className="text-typography-900 dark:text-typography-50"
+                      placeholderTextColor="#9CA3AF"
                     />
                   </Input>
                 </FormControl>
@@ -97,14 +118,18 @@ export default function RegisterScreen() {
                 {/* Confirm Password */}
                 <FormControl>
                   <FormControlLabel>
-                    <FormControlLabelText>Confirmar Contraseña</FormControlLabelText>
+                    <FormControlLabelText className="text-typography-700 dark:text-typography-300">
+                      Confirmar Contraseña
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input>
+                  <Input className="bg-background-50 dark:bg-background-900 border-outline-200 dark:border-outline-700">
                     <InputField
                       placeholder="••••••••"
                       value={confirmPassword}
                       onChangeText={setConfirmPassword}
                       secureTextEntry
+                      className="text-typography-900 dark:text-typography-50"
+                      placeholderTextColor="#9CA3AF"
                     />
                   </Input>
                 </FormControl>
@@ -118,13 +143,13 @@ export default function RegisterScreen() {
               {/* Links */}
               <VStack space="md" className="items-center">
                 <Link href="/(public)/login">
-                  <Text size="sm" className="text-primary-600">
+                  <Text size="sm" className="text-primary-600 dark:text-primary-400">
                     ¿Ya tienes cuenta? Inicia sesión
                   </Text>
                 </Link>
                 
                 <Link href="/(public)">
-                  <Text size="sm" className="text-typography-500">
+                  <Text size="sm" className="text-typography-500 dark:text-typography-400">
                     ← Volver al inicio
                   </Text>
                 </Link>

@@ -169,7 +169,7 @@ export default function SettingsScreen() {
           <Card className="p-4 bg-primary-50">
             <HStack space="sm" className="items-center">
               <Box className="w-12 h-12 rounded-full bg-primary-500 items-center justify-center">
-                <Text className="text-white text-lg font-bold">
+                <Text className="text-lg font-bold">
                   {userLogged?.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                 </Text>
               </Box>
@@ -231,7 +231,7 @@ export default function SettingsScreen() {
             onPress={handleLogout}
           >
             <HStack space="sm" className="items-center">
-              <Icon as={LogOut} size="sm" className="text-white" />
+              <Icon as={LogOut} size="sm"/>
               <ButtonText>Cerrar Sesión</ButtonText>
             </HStack>
           </Button>

@@ -5,16 +5,10 @@ import { View } from 'react-native';
 import { Sidebar } from '@/components/Sidebar';
 import { useResponsive } from '@/hooks/useResponsive';
 
-/**
- * Layout de Tabs con navegación adaptativa
- * - Desktop (>1024px): Sidebar lateral
- * - Mobile/Tablet: Tabs en la parte inferior
- */
 export default function TabsLayout() {
   const { shouldUseSidebar } = useResponsive();
 
   if (shouldUseSidebar) {
-    // 🖥️ Desktop: Mostrar con Sidebar lateral
     return (
       <View className="flex-1 flex-row">
         <Sidebar />
@@ -52,8 +46,8 @@ export default function TabsLayout() {
         name="dashboard"
         options={{
           title: 'Dashboard',
-          tabBarIcon: ({ color, size }) => (
-            <Icon as={Home} size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Icon as={Home} color={color} />
           ),
         }}
       />
@@ -61,8 +55,8 @@ export default function TabsLayout() {
         name="profile"
         options={{
           title: 'Perfil',
-          tabBarIcon: ({ color, size }) => (
-            <Icon as={User} size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Icon as={User} color={color} />
           ),
         }}
       />
@@ -70,8 +64,8 @@ export default function TabsLayout() {
         name="settings"
         options={{
           title: 'Ajustes',
-          tabBarIcon: ({ color, size }) => (
-            <Icon as={Settings} size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Icon as={Settings} color={color} />
           ),
         }}
       />

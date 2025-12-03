@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { View, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
-import { Link, useRouter, type Href } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { useAuthContext } from '@/context/AuthContext';
 import { Heading } from '@/components/ui/heading';
 import { Text } from '@/components/ui/text';
@@ -11,11 +11,9 @@ import { HStack } from '@/components/ui/hstack';
 import { Box } from '@/components/ui/box';
 import { Divider } from '@/components/ui/divider';
 import { FormControl, FormControlLabel, FormControlLabelText, FormControlError, FormControlErrorText } from '@/components/ui/form-control';
-import { OAuthButtons } from '@/components/OAuthButtons';
+import { OAuthButtons } from '@/components/auth/OAuthButtons';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
-/**
- * Pantalla de Login
- */
 export default function LoginScreen() {
   const router = useRouter();
   const { login, isLoading, error, clearError } = useAuthContext();
@@ -56,38 +54,36 @@ export default function LoginScreen() {
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         keyboardShouldPersistTaps="handled"
+        className="bg-background-0"
       >
-        <View className="flex-1 bg-white">
+        <View className="flex-1">
+          {/* Theme Toggle en la esquina superior derecha */}
+          <View className="absolute top-12 right-6 z-10">
+            <ThemeToggle />
+          </View>
+
           <Box className="flex-1 justify-center p-6">
             <VStack space="xl" className="w-full max-w-md mx-auto">
               {/* Header */}
               <VStack space="sm">
-                <Heading size="2xl">Iniciar Sesión</Heading>
-                <Text size="md" className="text-typography-500">
+                <Heading size="2xl" className="text-typography-900">
+                  Iniciar Sesión
+                </Heading>
+                <Text size="md" className="text-typography-500 ">
                   Ingresa tus credenciales para continuar
                 </Text>
               </VStack>
-
-              {/* OAuth Buttons */}
-              <OAuthButtons />
-
-              {/* Divider */}
-              <HStack className="items-center" space="md">
-                <Divider className="flex-1" />
-                <Text size="sm" className="text-typography-400">
-                  o continúa con email
-                </Text>
-                <Divider className="flex-1" />
-              </HStack>
 
               {/* Form */}
               <VStack space="lg">
                 {/* Username */}
                 <FormControl isInvalid={!!fieldErrors.username}>
                   <FormControlLabel>
-                    <FormControlLabelText>Usuario o Email</FormControlLabelText>
+                    <FormControlLabelText className="text-typography-700 ">
+                      Usuario o Email
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input>
+                  <Input className="bg-background-50 border-outline-200 ">
                     <InputField
                       placeholder="usuario@ejemplo.com"
                       value={username}
@@ -95,6 +91,8 @@ export default function LoginScreen() {
                       autoCapitalize="none"
                       autoCorrect={false}
                       keyboardType="email-address"
+                      className="text-typography-900"
+                      placeholderTextColor="#9CA3AF"
                     />
                   </Input>
                   {fieldErrors.username ? (
@@ -107,14 +105,18 @@ export default function LoginScreen() {
                 {/* Password */}
                 <FormControl isInvalid={!!fieldErrors.password}>
                   <FormControlLabel>
-                    <FormControlLabelText>Contraseña</FormControlLabelText>
+                    <FormControlLabelText className="text-typography-700 ">
+                      Contraseña
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input>
+                  <Input className="bg-background-50 border-outline-200 ">
                     <InputField
                       placeholder="••••••••"
                       value={password}
                       onChangeText={setPassword}
                       secureTextEntry
+                      className="text-typography-900"
+                      placeholderTextColor="#9CA3AF"
                     />
                   </Input>
                   {fieldErrors.password ? (
@@ -126,7 +128,7 @@ export default function LoginScreen() {
 
                 {/* Error del servidor */}
                 {error ? (
-                  <Box className="bg-error-50 p-3 rounded-lg">
+                  <Box className="bg-error-50 p-3 rounded-lg border border-error-200">
                     <Text size="sm" className="text-error-700">
                       {error}
                     </Text>
@@ -150,6 +152,19 @@ export default function LoginScreen() {
                 </Button>
               </VStack>
 
+                            {/* Divider */}
+              <HStack className="items-center" space="md">
+                <Divider className="flex-1 bg-outline-200 " />
+                <Text size="sm" className="text-typography-400 ">
+                  o continúa con estas opciones si ya la has vinculado
+                </Text>
+                <Divider className="flex-1 bg-outline-200 " />
+              </HStack>
+
+              {/* OAuth Buttons */}
+              <OAuthButtons />
+
+
               {/* Links */}
               <VStack space="md" className="items-center">
                 <Link href="/(public)/register">
@@ -158,11 +173,6 @@ export default function LoginScreen() {
                   </Text>
                 </Link>
                 
-                <Link href="/(public)">
-                  <Text size="sm" className="text-typography-500">
-                    ← Volver al inicio
-                  </Text>
-                </Link>
               </VStack>
             </VStack>
           </Box>
