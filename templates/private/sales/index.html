@@ -1,0 +1,246 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Gestión de Productos{% endblock %}
+
+{% block content %}
+<!-- Skeleton de carga inicial -->
+<div id="initial-skeleton" class="skeleton h-full w-full rounded-lg flex items-center justify-center">
+  <div>
+    <span class="loading loading-bars w-16 h-16"></span>
+    <span class="block text-center text-base-content/50 text-sm">Cargando</span>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<div id="app-content" class="hidden p-4">
+  <!-- Header con botón transferir -->
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+    <div>
+      <h1 class="text-2xl font-bold">Gestión de Productos</h1>
+      <p class="text-base-content/70 text-sm mt-1">Transfiere productos entre departamentos y categorías</p>
+    </div>
+    
+    <!-- Botón Transferir -->
+    <button id="btn-transfer" class="btn btn-success gap-2" disabled>
+      <i data-lucide="arrow-right-left" class="w-5 h-5"></i>
+      Transferir
+      <span class="badge badge-success-content" id="transfer-summary-count">0</span>
+      productos
+    </button>
+  </div>
+
+  <!-- Todos los filtros en una fila -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+    <!-- Origen -->
+    <div>
+      <label class="label">
+        <span class="label-text font-medium text-primary">📦 Departamento origen</span>
+      </label>
+      <select id="source-department" class="select select-bordered select-primary w-full">
+        <option value="">Seleccionar...</option>
+      </select>
+    </div>
+    <div>
+      <label class="label">
+        <span class="label-text font-medium text-primary">📦 Categoría origen</span>
+      </label>
+      <select id="source-category" class="select select-bordered select-primary w-full" disabled>
+        <option value="">Seleccionar...</option>
+      </select>
+    </div>
+    
+    <!-- Destino -->
+    <div>
+      <label class="label">
+        <span class="label-text font-medium text-success">🎯 Departamento destino</span>
+      </label>
+      <select id="target-department" class="select select-bordered select-success w-full">
+        <option value="">Seleccionar...</option>
+        <option value="unassigned">Sin asignar</option>
+      </select>
+    </div>
+    <div>
+      <label class="label">
+        <span class="label-text font-medium text-success">🎯 Categoría destino</span>
+      </label>
+      <select id="target-category" class="select select-bordered select-success w-full" disabled>
+        <option value="">Seleccionar...</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Dual Panel -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Panel Izquierdo - Productos Disponibles (ORIGEN) -->
+    <div class="lg:col-span-5">
+      <div class="card bg-base-100 border-2 border-primary/30">
+        <div class="card-body p-0">
+          <div class="p-4 border-b border-base-300 bg-primary/5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-primary">Productos Disponibles</h3>
+              <div class="flex items-center gap-2">
+                <span id="loading-available" class="loading loading-spinner loading-sm hidden"></span>
+                <span class="badge badge-primary" id="available-count">0 items</span>
+              </div>
+            </div>
+            <label class="input input-sm w-full">
+              <i data-lucide="search" class="w-4 h-4 opacity-50"></i>
+              <input type="text" id="search-available" placeholder="Buscar producto..." class="grow" />
+            </label>
+          </div>
+          
+          <div class="overflow-x-auto" style="max-height: 400px; min-height: 300px;">
+            <table class="table table-sm table-pin-rows">
+              <thead>
+                <tr>
+                  <th class="w-12">
+                    <input type="checkbox" id="select-all-available" class="checkbox checkbox-sm checkbox-primary" />
+                  </th>
+                  <th>Nombre</th>
+                  <th class="hidden sm:table-cell">Categoría</th>
+                  <th class="hidden md:table-cell">Descripción</th>
+                </tr>
+              </thead>
+              <tbody id="available-products">
+                <tr>
+                  <td colspan="4" class="text-center py-12 text-base-content/50">
+                    <i data-lucide="package" class="w-16 h-16 mx-auto mb-3 opacity-20"></i>
+                    <p class="font-medium">Selecciona un departamento origen</p>
+                    <p class="text-xs mt-1">Los productos aparecerán aquí</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-4 border-t border-base-300 flex justify-between items-center bg-base-50">
+            <div class="join">
+              <button class="join-item btn btn-sm" id="prev-available" disabled>«</button>
+              <button class="join-item btn btn-sm btn-disabled" id="page-available">1</button>
+              <button class="join-item btn btn-sm" id="next-available" disabled>»</button>
+            </div>
+            <span class="text-sm text-base-content/70" id="selected-available-count">0 seleccionados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles Centrales -->
+    <div class="lg:col-span-2 flex lg:flex-col items-center justify-center gap-2 py-4">
+      <div class="tooltip" data-tip="Mover seleccionados">
+        <button id="btn-move-right" class="btn btn-circle btn-primary btn-lg" disabled>
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="tooltip" data-tip="Mover todos">
+        <button id="btn-move-all-right" class="btn btn-circle btn-outline btn-primary" disabled>
+          <i data-lucide="chevrons-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <div class="divider lg:divider-vertical m-0 opacity-30"></div>
+      
+      <div class="tooltip" data-tip="Devolver seleccionados">
+        <button id="btn-move-left" class="btn btn-circle btn-secondary btn-lg" disabled>
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="tooltip" data-tip="Devolver todos">
+        <button id="btn-move-all-left" class="btn btn-circle btn-outline btn-secondary" disabled>
+          <i data-lucide="chevrons-left" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel Derecho - Productos a Transferir -->
+    <div class="lg:col-span-5">
+      <div class="card bg-base-100 border-2 border-success/30">
+        <div class="card-body p-0">
+          <div class="p-4 border-b border-base-300 bg-success/5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-success">Productos a Transferir</h3>
+              <span class="badge badge-success" id="transfer-count">0 items</span>
+            </div>
+            <label class="input input-sm w-full">
+              <i data-lucide="search" class="w-4 h-4 opacity-50"></i>
+              <input type="text" id="search-transfer" placeholder="Buscar producto..." class="grow" />
+            </label>
+          </div>
+          
+          <div class="overflow-x-auto" style="max-height: 400px; min-height: 300px;">
+            <table class="table table-sm table-pin-rows">
+              <thead>
+                <tr>
+                  <th class="w-12">
+                    <input type="checkbox" id="select-all-transfer" class="checkbox checkbox-sm checkbox-success" />
+                  </th>
+                  <th>Nombre</th>
+                  <th class="hidden sm:table-cell">Categoría</th>
+                  <th class="hidden md:table-cell">Descripción</th>
+                </tr>
+              </thead>
+              <tbody id="transfer-products">
+                <tr>
+                  <td colspan="4" class="text-center py-12 text-base-content/50">
+                    <i data-lucide="inbox" class="w-16 h-16 mx-auto mb-3 opacity-20"></i>
+                    <p class="font-medium">Sin productos para transferir</p>
+                    <p class="text-xs mt-1">Usa los botones ▶ para mover productos aquí</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-4 border-t border-base-300 flex justify-between items-center bg-base-50">
+            <div class="join">
+              <button class="join-item btn btn-sm" id="prev-transfer" disabled>«</button>
+              <button class="join-item btn btn-sm btn-disabled" id="page-transfer">1</button>
+              <button class="join-item btn btn-sm" id="next-transfer" disabled>»</button>
+            </div>
+            <span class="text-sm text-base-content/70" id="selected-transfer-count">0 seleccionados</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Preview de productos en destino -->
+      <div id="target-preview" class="mt-4 hidden">
+        <div class="alert alert-info shadow-sm">
+          <i data-lucide="info" class="w-5 h-5 shrink-0"></i>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium">Ya existen en el destino:</span>
+              <div class="flex items-center gap-2">
+                <span id="loading-target" class="loading loading-spinner loading-sm hidden"></span>
+                <span class="badge badge-info" id="target-product-count">0</span>
+              </div>
+            </div>
+            <ul id="target-products-list" class="text-xs mt-2 opacity-80 max-h-20 overflow-y-auto list-disc list-inside">
+              <li>Sin productos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sin permisos -->
+<div id="no-permission-state" class="hidden">
+  <section class="min-h-[70vh] grid place-items-center">
+    <div class="text-center items-center flex flex-col">
+      <i data-lucide="shield-x" class="w-24 h-24 opacity-30 mb-6"></i>
+      <h2 class="text-2xl font-bold mb-2">Sin permisos</h2>
+      <p class="text-base-content/70">No tienes permisos para ver esta sección.</p>
+    </div>
+  </section>
+</div>
+
+{% include 'private/product_management/modal-confirm.html' %}
+
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'private/js/api/products.js' %}" defer></script>
+<script type="module" src="{% static 'private/js/product-management/index.js' %}"></script>
+{% endblock %}

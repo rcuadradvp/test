@@ -1,0 +1,59 @@
+<!-- frontend/templates/base.html -->
+{% load static %}
+<!doctype html>
+<html lang="es" data-theme="{{ request.COOKIES.theme|default:'light' }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Sistema ERP para gestión integral de ventas y clientes">
+  <meta name="robots" content="noindex, nofollow">
+  {% block pre_styles %}{% endblock %}
+  <script>
+(() => {
+  const root = document.documentElement;
+  const THEME_LIGHT = 'light';
+  const THEME_DARK  = 'dark';
+
+  const getCookie = (n) => (document.cookie.match(new RegExp('(?:^|;)\\s*' + n + '\\s*=\\s*([^;]+)')) || [])[1];
+  const cookieTheme = getCookie('theme');
+  let theme = cookieTheme;
+  if (!theme) {
+    try { theme = localStorage.getItem('theme'); } catch {}
+  }
+  if (!theme) {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    theme = prefersDark ? THEME_DARK : THEME_LIGHT;
+  }
+  if (root.getAttribute('data-theme') !== theme) {
+    root.setAttribute('data-theme', theme);
+  }
+})();
+</script>
+
+<style>
+  html.init-theme * { transition: none !important; }
+</style>
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+  <title>
+  {% block title %}Sistema ERP{% endblock %}
+  </title>
+  <link rel="icon" href="{% static 'assets/icon/logoS.ico' %}">
+  
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  
+  {% block extra_css %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+  {% block body %}
+  <main>{% block content %}{% endblock %}</main>
+  {% endblock %}
+  
+  <script type="module" src="https://unpkg.com/cally"></script>
+  <script type="module" src="{% static 'js/toggle-theme.js' %}"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

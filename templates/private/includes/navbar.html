@@ -1,0 +1,100 @@
+<!-- frontend/templates/private/includes/navbar.html -->
+<div class="p-2 pb-0">
+  <div class=" border bg-[var(--color-sidebar)] border-base-300 navbar rounded-lg shadow-md min-h-16">
+    <div class="navbar-start">
+      <label for="sidebar-toggle" class="btn btn-square btn-ghost lg:hidden bg-[var(--color-sidebar)] hover:bg-[var(--color-text-hover)] w-9 h-9 cursor-pointer text-[var(--color-text-sidebar)] border border-transparent hover:border-white">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </label>
+        <button type="button" data-sidebar-toggle class="btn btn-square btn-ghost hover:bg-[var(--color-text-hover)] hidden lg:flex">
+          <i class="toggle-chevron text-[var(--color-text-sidebar)]" data-lucide="chevron-left" aria-hidden="true"></i>
+        </button>
+    </div>
+    
+    <div class="navbar-end">
+      <div class="flex items-center gap-3">
+        <div>
+          {% include 'includes/toggle-theme.html' %}
+        </div>
+
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="flex items-center gap-3 p-2 hover:bg-[var(--color-text-hover)] rounded-lg transition-colors cursor-pointer">
+            <div id="user-avatar" class="w-10 h-10 bg-[var(--color-text-sidebar)] text-base-content rounded-full flex items-center justify-center font-bold">
+              <span class="loading loading-spinner loading-sm"></span>
+            </div>
+            <div class="text-right hidden sm:block">
+              <div id="user-fullname" class="text-[var(--color-text-sidebar)] font-semibold truncate max-w-48">
+                Cargando...
+              </div> 
+              <div id="user-email" class="text-sm text-[var(--color-text-sidebar)] truncate max-w-48">
+                ...
+              </div>
+            </div>
+          </div>
+          
+          <ul tabindex="0" class="dropdown-content bg-[var(--color-sidebar)] z-[1] menu p-2 shadow-xl rounded-lg w-60 border border-base-300">
+          
+            <li class="mt-2">
+              <a href="#" class="flex items-center gap-3  hover:bg-[var(--color-text-hover)] text-[var(--color-text-sidebar)] ">
+                <i data-lucide="user" class="w-4 h-4"></i>
+                <span>Mi Perfil</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-3  hover:bg-[var(--color-text-hover)] text-[var(--color-text-sidebar)] ">
+                <i data-lucide="settings" class="w-4 h-4"></i>
+                <span>Configuración</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-3 hover:bg-[var(--color-text-hover)] text-[var(--color-text-sidebar)]">
+                <i data-lucide="help-circle" class="w-4 h-4"></i>
+                <span>Ayuda & Soporte</span>
+              </a>
+            </li>
+            
+           <hr class="my-2 border-base-100">
+            
+            <li>
+              <a id="logout-btn" class="flex items-center gap-3 text-red-400 hover:bg-red-900/20 hover:text-red-300">
+                <i data-lucide="log-out" class="w-4 h-4"></i>
+                <span>Cerrar Sesión</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cargar datos del usuario en el navbar
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        const user = await AuthAPI.getUser({ silent: true });
+        
+        // Actualizar avatar
+        const initials = (user.first_name?.[0] || '') + (user.last_name?.[0] || user.email[0].toUpperCase());
+        document.getElementById('user-avatar').textContent = initials;
+        
+        // Actualizar nombre completo
+        const fullName = user.first_name && user.last_name 
+            ? `${user.first_name} ${user.last_name}` 
+            : user.email.split('@')[0];
+        document.getElementById('user-fullname').textContent = fullName;
+        
+        // Actualizar email
+        document.getElementById('user-email').textContent = user.email;
+        
+    } catch (error) {
+        console.error('[NAVBAR] Error cargando usuario:', error);
+        document.getElementById('user-avatar').innerHTML = '<i data-lucide="user" class="w-5 h-5"></i>';
+        document.getElementById('user-fullname').textContent = 'Usuario';
+        document.getElementById('user-email').textContent = 'No disponible';
+        
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+});
+</script>

@@ -1,0 +1,154 @@
+html.initializing .sidebar-container,
+html.initializing .sidebar-text,
+html.initializing .sidebar-header,
+html.initializing .sidebar-menu a,
+html.initializing .sidebar-menu {
+    transition: none !important;
+}
+
+/* ===== ESTADOS DEL SIDEBAR ===== */
+html.sidebar-collapsed .sidebar-container {
+    width: 80px !important;
+}
+
+html.sidebar-collapsed .sidebar-text {
+    display: none !important;
+}
+
+html.sidebar-collapsed .sidebar-header {
+    padding: .75rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+html.sidebar-collapsed .sidebar-menu a {
+    justify-content: center !important;
+    padding: .75rem !important;
+}
+
+html.sidebar-collapsed .sidebar-menu {
+    padding: .5rem .75rem !important;
+}
+
+html.sidebar-expanded .sidebar-container {
+    width: 16rem !important;
+}
+
+html.sidebar-expanded .toggle-chevron {
+    transform: rotate(0deg);
+}
+
+html.sidebar-collapsed .toggle-chevron {
+    transform: rotate(180deg);
+}
+
+/* ===== LOGO DINÁMICO ===== */
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+    background-image: var(--logo-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+html.sidebar-collapsed .sidebar-logo {
+    width: 48px;
+    background-position: center;
+}
+
+html.sidebar-expanded[data-theme="light"] {
+    --logo-url: url("/static/assets/images/logoSand.png");
+}
+
+html.sidebar-expanded[data-theme="dark"] {
+    --logo-url: url("/static/assets/images/logoSand.png");
+}
+
+html.sidebar-collapsed[data-theme="light"] {
+    --logo-url: url("/static/assets/images/logoSand.png");
+}
+
+html.sidebar-collapsed[data-theme="dark"] {
+    --logo-url: url("/static/assets/images/logoSand.png");
+}
+
+/* ===== SISTEMA DE SCROLL CONTROLADO ===== */
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+.drawer {
+    height: 100vh;
+    overflow: hidden;
+}
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+.navbar-container {
+    flex-shrink: 0;
+}
+.main-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0.5rem;
+    padding-top: 2;
+    overflow: hidden;
+}
+.content-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+.content-card-body {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.content-card-body::-webkit-scrollbar {
+    width: 10px;
+}
+.content-card-body::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.content-card-body::-webkit-scrollbar-thumb {
+    background: var(--color-base-content);
+    opacity: 0.2;
+    border-radius: 5px;
+    border: 2px solid var(--color-base-100);
+}
+
+.content-card-body::-webkit-scrollbar-thumb:hover {
+    opacity: 0.4;
+}
+
+.content-card-body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-base-content) transparent;
+}
+
+.content-card-body {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        padding: 0.5rem;
+        padding-top: 2;
+    }
+
+    .content-card-body {
+        padding: 0.75rem;
+    }
+}

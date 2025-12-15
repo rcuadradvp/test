@@ -1,0 +1,119 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Panel de control{% endblock %}
+
+{% block content %}
+<div class="p-4">
+  <h1 class="text-xl font-bold mb-6">Panel de control</h1>
+  
+  <!-- Mensaje container -->
+  <div id="message-container"></div>
+
+  <!-- Stats Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+    <!-- Card: Usuario -->
+    <div class="stats shadow bg-base-300 border">
+      <div class="stat">
+        <div class="stat-figure text-primary">
+          <i data-lucide="user" class="w-8 h-8"></i>
+        </div>
+        <div class="stat-title">Usuario</div>
+        <div class="stat-value text-lg" id="user-name">Cargando...</div>
+        <div class="stat-desc" id="user-role">-</div>
+      </div>
+    </div>
+
+    <!-- Card: Permisos -->
+    <div class="stats shadow bg-base-300 border border-base-400">
+      <div class="stat">
+        <div class="stat-figure text-secondary">
+          <i data-lucide="shield" class="w-8 h-8"></i>
+        </div>
+        <div class="stat-title">Permisos</div>
+        <div class="stat-value text-lg" id="permissions-count">0</div>
+        <div class="stat-desc">Acciones disponibles</div>
+      </div>
+    </div>
+
+    <!-- Card: Páginas -->
+    <div class="stats shadow bg-base-300 border border-base-400">
+      <div class="stat">
+        <div class="stat-figure text-accent">
+          <i data-lucide="layout" class="w-8 h-8"></i>
+        </div>
+        <div class="stat-title">Páginas</div>
+        <div class="stat-value text-lg" id="pages-count">0</div>
+        <div class="stat-desc">Módulos accesibles</div>
+      </div>
+    </div>
+
+    <!-- Card: Sistema -->
+    <div class="stats shadow bg-base-300 border">
+      <div class="stat">
+        <div class="stat-figure text-success">
+          <i data-lucide="activity" class="w-8 h-8"></i>
+        </div>
+        <div class="stat-title">Caché</div>
+        <div class="stat-value text-lg" id="cache-status">✅</div>
+        <div class="stat-desc">Sistema activo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <!-- Card: Acceso Rápido -->
+    <div class="card bg-base-300 shadow-xl border ">
+      <div class="card-body">
+        <h2 class="card-title">
+          <i data-lucide="zap" class="w-5 h-5"></i>
+          Acceso Rápido
+        </h2>
+        <div id="quick-access-list" class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="loading loading-spinner loading-sm"></span>
+            <span>Cargando módulos...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Información del Sistema -->
+    <div class="card bg-base-300 shadow-xl border border-base-400 ">
+      <div class="card-body">
+        <h2 class="card-title">
+          <i data-lucide="info" class="w-5 h-5"></i>
+          Información
+        </h2>
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-base-content/70">Email:</span>
+            <span class="font-semibold" id="user-email">-</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-base-content/70">Tipo de usuario:</span>
+            <span class="font-semibold" id="user-type">-</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-base-content/70">Es Master Admin:</span>
+            <span class="font-semibold" id="is-master">-</span>
+          </div>
+          <div class="divider"></div>
+          <button 
+            class="btn btn-sm btn-outline btn-primary w-full" 
+            onclick="APIHelper.refreshPermissions().then(() => location.reload())"
+          >
+            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+            Actualizar Permisos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'private/js/dashboard/index.js' %}"></script>
+{% endblock %}

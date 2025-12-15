@@ -1,0 +1,346 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Detalle del Producto{% endblock %}
+
+{% block content %}
+<!-- Skeleton de carga inicial (pantalla completa) con loading -->
+<div id="initial-skeleton" class="skeleton h-full w-full rounded-lg flex items-center justify-center">
+  <div>
+    <span class="loading loading-bars w-16 h-16"></span>
+    <span class="block text-center text-base-content/50 text-sm">Cargando producto</span>
+  </div>
+</div>
+
+<!-- Estado sin permisos -->
+<div id="no-permission-state" class="hidden">
+  <section class="min-h-[70vh] grid place-items-center">
+    <div class="text-center items-center flex flex-col">
+      <i data-lucide="shield-x" class="w-24 h-24 opacity-30 mb-6"></i>
+      <h2 class="text-2xl font-bold mb-2">Acceso denegado</h2>
+      <p class="text-base-content/70 mb-6">No tienes permisos para ver esta información.</p>
+      <a href="/productos/" class="btn btn-primary">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        Volver a productos
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- Contenido principal -->
+<div id="app-content" 
+     class="hidden p-0 sm:p-4"
+     data-product-id="{{ product_id }}">
+  
+  <!-- Estado de carga -->
+  <div id="loading-container" class="hidden">
+    <div class="card bg-base-100 border border-base-400">
+      <div class="card-body">
+        <div class="flex flex-col items-center justify-center gap-3 py-12">
+          <span class="loading loading-spinner loading-lg"></span>
+          <p class="text-base-content/70">Cargando producto...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estado de error -->
+  <div id="error-state" class="hidden">
+    <div class="card bg-base-100 border border-base-400">
+      <div class="card-body items-center text-center py-12">
+        <i data-lucide="alert-triangle" class="w-16 h-16 text-error/50 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Error al cargar</h3>
+        <p id="error-message" class="text-base-content/70 mb-6">Ha ocurrido un error</p>
+        <div class="flex gap-2">
+          <button id="btn-retry" class="btn btn-primary">
+            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+            Reintentar
+          </button>
+          <a href="/productos/" class="btn btn-ghost">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            Volver
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido del producto -->
+  <div id="container" class="hidden">
+    <!-- Header -->
+    <div class="bg-base-100 rounded-lg border border-base-400 p-4 mb-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <!-- Breadcrumb y título -->
+        <div class="flex items-start gap-4">
+          <button id="btn-back" class="btn btn-ghost btn-square shrink-0">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          </button>
+          <div>
+            <!-- Breadcrumb -->
+            <div class="text-sm breadcrumbs mb-1 p-0">
+              <ul class="text-sm">
+                <li><a href="/productos/" class="text-base-content/60 hover:text-primary">Productos</a></li>
+                <li class="text-base-content/60">Detalle</li>
+              </ul>
+            </div>
+            <h1 id="product-title" class="text-2xl font-bold">Cargando...</h1>
+            <div class="flex items-center gap-2 mt-1">
+              <i data-lucide="barcode" class="w-4 h-4 text-base-content/50"></i>
+              <span id="product-barcode-header" class="text-base-content/60 font-mono text-sm">---</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Acciones -->
+        <div class="flex gap-2 ml-14 md:ml-0">
+          <button id="btn-edit" class="btn btn-primary hidden">
+            <i data-lucide="edit" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Editar</span>
+          </button>
+          <button id="btn-delete" class="btn btn-error btn-outline hidden">
+            <i data-lucide="trash-2" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Eliminar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de contenido -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      
+      <!-- Columna izquierda (2/3) -->
+      <div class="lg:col-span-2 space-y-4">
+        
+        <!-- Información básica -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body">
+            <h2 class="card-title text-lg flex items-center gap-2 mb-4">
+              <i data-lucide="info" class="w-5 h-5 text-primary"></i>
+              Información Básica
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Nombre -->
+              <div class="md:col-span-2">
+                <label class="text-sm text-base-content/60 block mb-1">Nombre del producto</label>
+                <p id="detail-name" class="font-semibold text-lg">-</p>
+              </div>
+              
+              <!-- Descripción -->
+              <div class="md:col-span-2">
+                <label class="text-sm text-base-content/60 block mb-1">Descripción</label>
+                <p id="detail-description" class="text-base-content/80">-</p>
+              </div>
+              
+              <!-- Código de barras -->
+              <div>
+                <label class="text-sm text-base-content/60 block mb-1">Código de barras</label>
+                <p id="detail-barcode" class="font-mono font-semibold">-</p>
+              </div>
+              
+              <!-- Código de barras paquete -->
+              <div>
+                <label class="text-sm text-base-content/60 block mb-1">Código de barras (paquete)</label>
+                <p id="detail-barcode-package" class="font-mono">-</p>
+              </div>
+              
+              <!-- Departamento -->
+              <div class="md:col-span-2">
+                <label class="text-sm text-base-content/60 block mb-1">Departamento</label>
+                <p id="detail-department" class="flex items-center gap-2">
+                  <i data-lucide="folder" class="w-4 h-4 text-primary"></i>
+                  <span>-</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inventario -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body">
+            <h2 class="card-title text-lg flex items-center gap-2 mb-4">
+              <i data-lucide="package" class="w-5 h-5 text-primary"></i>
+              Inventario
+              <span id="stock-indicator" class="badge badge-success ml-2">En stock</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Stock actual -->
+              <div class="bg-base-200/50 rounded-lg p-4 text-center">
+                <p class="text-sm text-base-content/60 mb-1">Stock Actual</p>
+                <p id="detail-stock-units" class="text-3xl font-bold text-primary">0</p>
+                <p class="text-xs text-base-content/50">unidades</p>
+              </div>
+              
+              <!-- Stock display -->
+              <div class="bg-base-200/50 rounded-lg p-4 text-center">
+                <p class="text-sm text-base-content/60 mb-1">Stock Visible</p>
+                <p id="detail-stock-display" class="text-3xl font-bold">0</p>
+                <p class="text-xs text-base-content/50">en exhibición</p>
+              </div>
+              
+              <!-- Stock mínimo -->
+              <div class="bg-base-200/50 rounded-lg p-4 text-center">
+                <p class="text-sm text-base-content/60 mb-1">Stock Mínimo</p>
+                <p id="detail-min-stock" class="text-3xl font-bold text-warning">0</p>
+                <p class="text-xs text-base-content/50">alerta</p>
+              </div>
+            </div>
+
+            <!-- Sección de empaque (condicional) -->
+            <div id="package-section" class="hidden mt-4 pt-4 border-t border-base-200">
+              <h3 class="font-semibold mb-3 flex items-center gap-2">
+                <i data-lucide="boxes" class="w-4 h-4"></i>
+                Información de Empaque
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="text-sm text-base-content/60 block mb-1">Unidades por paquete</label>
+                  <p id="detail-units-per-package" class="font-semibold">-</p>
+                </div>
+                <div>
+                  <label class="text-sm text-base-content/60 block mb-1">Paquetes por bandeja</label>
+                  <p id="detail-packages-per-tray" class="font-semibold">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Precios -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body">
+            <h2 class="card-title text-lg flex items-center gap-2 mb-4">
+              <i data-lucide="dollar-sign" class="w-5 h-5 text-primary"></i>
+              Precios
+              <span id="tax-exempt-badge" class="badge badge-warning ml-2 hidden">Exento de IVA</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Precio unitario -->
+              <div class="bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg p-4">
+                <p class="text-sm text-base-content/60 mb-1">Precio Unitario</p>
+                <p id="detail-unit-price" class="text-2xl font-bold">$0</p>
+                <p class="text-xs text-base-content/50">sin IVA</p>
+              </div>
+              
+              <!-- Precio con IVA -->
+              <div class="bg-gradient-to-br from-success/10 to-success/5 rounded-lg p-4">
+                <p class="text-sm text-base-content/60 mb-1">Precio con IVA</p>
+                <p id="detail-price-iva" class="text-2xl font-bold text-success">$0</p>
+                <p class="text-xs text-base-content/50">precio final</p>
+              </div>
+            </div>
+
+            <!-- Precios de empaque (condicional) -->
+            <div id="package-prices-section" class="hidden mt-4 pt-4 border-t border-base-200">
+              <h3 class="font-semibold mb-3">Precios por Empaque</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="text-sm text-base-content/60 block mb-1">Precio paquete</label>
+                  <p id="detail-package-price" class="font-semibold">-</p>
+                </div>
+                <div>
+                  <label class="text-sm text-base-content/60 block mb-1">Precio bandeja</label>
+                  <p id="detail-tray-price" class="font-semibold">-</p>
+                </div>
+                <div>
+                  <label class="text-sm text-base-content/60 block mb-1">Precio calculado</label>
+                  <p id="detail-calculated-price-package" class="font-semibold">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha (1/3) -->
+      <div class="space-y-4">
+        
+        <!-- Estado -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body">
+            <h2 class="card-title text-lg flex items-center gap-2 mb-4">
+              <i data-lucide="activity" class="w-5 h-5 text-primary"></i>
+              Estado
+            </h2>
+            
+            <div class="flex flex-col items-center py-4">
+              <div id="status-badge" class="badge badge-success badge-lg gap-2 p-4">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Activo
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body">
+            <h2 class="card-title text-lg flex items-center gap-2 mb-4">
+              <i data-lucide="settings" class="w-5 h-5 text-primary"></i>
+              Configuración
+            </h2>
+            
+            <div class="space-y-4">
+              <!-- Envase retornable -->
+              <div class="flex items-center justify-between">
+                <span class="text-base-content/70 flex items-center gap-2">
+                  <i data-lucide="recycle" class="w-4 h-4"></i>
+                  Envase retornable
+                </span>
+                <span id="detail-returnable" class="font-semibold">No</span>
+              </div>
+              
+              <!-- Divider -->
+              <div class="divider my-2"></div>
+              
+              <!-- Proveedores -->
+              <div>
+                <label class="text-sm text-base-content/60 mb-2 flex items-center gap-2">
+                  <i data-lucide="truck" class="w-4 h-4"></i>
+                  Proveedores
+                </label>
+                <div id="detail-suppliers" class="flex flex-wrap gap-2 mt-2">
+                  <span class="text-base-content/50 italic text-sm">Sin proveedores</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fechas -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body">
+            <h2 class="card-title text-lg flex items-center gap-2 mb-4">
+              <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+              Historial
+            </h2>
+            
+            <div class="space-y-4">
+              <!-- Fecha de creación -->
+              <div>
+                <label class="text-sm text-base-content/60 block mb-1">Fecha de creación</label>
+                <p id="detail-created-at" class="text-sm font-medium">-</p>
+              </div>
+              
+              <!-- Última actualización -->
+              <div>
+                <label class="text-sm text-base-content/60 block mb-1">Última actualización</label>
+                <p id="detail-updated-at" class="text-sm font-medium">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'private/js/api/products.js' %}" defer></script>
+<script type="module" src="{% static 'private/js/products/product-detail/index.js' %}"></script>
+{% endblock %}

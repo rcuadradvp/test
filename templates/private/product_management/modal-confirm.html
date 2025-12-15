@@ -1,0 +1,51 @@
+<dialog id="modal_confirm_transfer" class="modal">
+  <div class="modal-box relative">
+    <div id="modal-loading-overlay" class="hidden absolute inset-0 bg-base-100/80 backdrop-blur-sm z-50 rounded-lg flex items-center justify-center">
+      <div class="text-center">
+        <span class="loading loading-bars loading-lg"></span>
+        <p class="mt-3 text-sm font-medium">Transfiriendo productos...</p>
+      </div>
+    </div>
+
+    <h3 class="font-bold text-lg mb-4">Confirmar Transferencia</h3>
+    
+    <div class="alert alert-info mb-4">
+      <i data-lucide="info" class="w-5 h-5"></i>
+      <div>
+        <p class="font-semibold">Estás a punto de transferir productos</p>
+        <p class="text-sm mt-1" id="transfer-summary"></p>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <p class="text-sm font-semibold mb-2">Destino:</p>
+      <div class="bg-base-200 p-3 rounded-lg">
+        <p class="text-sm" id="destination-info"></p>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <p class="text-sm font-semibold mb-2">Productos a transferir:</p>
+      <div class="bg-base-200 p-3 rounded-lg max-h-40 overflow-y-auto">
+        <ul class="text-sm space-y-1" id="products-list"></ul>
+      </div>
+    </div>
+    
+    <p class="text-sm text-base-content/70 mb-4">
+      Esta acción actualizará el departamento y categoría de los productos seleccionados.
+    </p>
+    
+    <div class="flex justify-end gap-2">
+      <button class="btn btn-outline" id="btn-cancel-transfer">
+        Cancelar
+      </button>
+      <button class="btn btn-info" id="btn-confirm-transfer">
+        <i data-lucide="check" class="w-4 h-4"></i>
+        Confirmar Transferencia
+      </button>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
