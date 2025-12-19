@@ -1,14 +1,10 @@
 {
   "expo": {
-    "name": "test",
-    "slug": "test",
+    "name": "vsentinel",
+    "slug": "vsentinel",
     "version": "1.0.0",
-    "scheme": "test",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "scheme": "vsentinel",
+    "platforms": ["ios", "android"],
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -16,7 +12,37 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Permitir el uso de Face ID para iniciar sesión de forma rápida y segura."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permitir acceso a ubicación para localizar beacons cercanos.",
+          "locationAlwaysPermission": "Permitir acceso a ubicación en segundo plano para monitoreo continuo.",
+          "locationWhenInUsePermission": "Permitir acceso a ubicación para localizar beacons."
+        }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": ["peripheral", "central"],
+          "bluetoothAlwaysPermission": "Permitir acceso a Bluetooth para detectar beacons Minew."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "ndkVersion": "29.0.14206865"
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
@@ -30,18 +56,37 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Permitir el uso de Face ID para iniciar sesión de forma rápida y segura.",
+        "NSBluetoothAlwaysUsageDescription": "Permitir acceso a Bluetooth para detectar beacons Minew.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Permitir acceso a ubicación para localizar beacons.",
+        "NSLocationWhenInUseUsageDescription": "Permitir acceso a ubicación para localizar beacons.",
+        "UIBackgroundModes": ["bluetooth-central", "location"]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.test"
+      "package": "com.vsentinel.app",
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f23148a5-e594-4b95-b545-4d28e9993328"
+      }
     }
   }
 }

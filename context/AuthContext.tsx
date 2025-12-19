@@ -1,350 +1,346 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState, useRef } from 'react';
-import { AppState, Platform } from 'react-native';
-import { supabase } from '@/config/supabase.config';
-import { storage } from '@/services/storage/SecureStorage';
-import { STORAGE_KEYS } from '@/constants/storage';
-import type { User, AuthContextType } from '@/types/auth.types';
+// context/AuthContext.tsx
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+  useMemo,
+  useRef,
+} from 'react';
+import { AppState, AppStateStatus, Alert } from 'react-native';
+import { router } from 'expo-router';
+import { AuthService } from '@/services/auth';
+import { BiometricService } from '@/services/biometric';
+import {
+  initializeTokens,
+  onTokenExpired,
+  getAccessToken,
+  shouldRefreshToken,
+} from '@/services/api';
+import { isTokenExpired } from '@/utils/jwt';
+import type { User, LoginCredentials } from '@/types';
 
-export const AuthContext = createContext<AuthContextType>({} as AuthContextType);
+interface AuthContextType {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string | null;
+  login: (credentials: LoginCredentials) => Promise<boolean>;
+  logout: () => Promise<void>;
+  refreshSession: () => Promise<boolean>;
+  clearError: () => void;
+  biometricAvailable: boolean;
+  biometricEnabled: boolean;
+  biometricType: string;
+  enableBiometric: (username: string, password: string) => Promise<boolean>;
+  disableBiometric: () => Promise<void>;
+  loginWithBiometric: () => Promise<boolean>;
+  shouldPromptBiometric: boolean;
+  clearBiometricPrompt: () => void;
+}
 
-export function AuthContextProvider({ children }: { children: React.ReactNode }) {
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+interface AuthProviderProps {
+  children: React.ReactNode;
+}
+
+export function AuthProvider({ children }: AuthProviderProps) {
+  const [user, setUser] = useState<User | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [userLogged, setUserLogged] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isInitializing, setIsInitializing] = useState(true);
-  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [biometricAvailable, setBiometricAvailable] = useState(false);
+  const [biometricEnabled, setBiometricEnabled] = useState(false);
+  const [biometricType, setBiometricType] = useState('');
+  const [shouldPromptBiometric, setShouldPromptBiometric] = useState(true);
+  const isInitialized = useRef(false);
+  const appState = useRef(AppState.currentState);
 
-  // Refs para evitar múltiples inicializaciones y condiciones de carrera
-  const isInitializedRef = useRef(false);
-  const isLoadingProfileRef = useRef(false);
+  const clearAuthState = useCallback(() => {
+    setUser(null);
+    setIsAuthenticated(false);
+    setError(null);
+  }, []);
 
-  /**
-   * Logout: limpia toda la sesión
-   */
+  const clearBiometricPrompt = useCallback(() => {
+    setShouldPromptBiometric(false);
+  }, []);
+
   const logout = useCallback(async () => {
-    try {
-      console.log('🚪 Logging out...');
-      await supabase.auth.signOut();
-      await storage.removeMultiple([
-        STORAGE_KEYS.SESSION_KEY,
-        STORAGE_KEYS.USER_DATA_KEY,
-      ]);
-    } catch (err) {
-      console.error('Error during logout:', err);
-    } finally {
-      setUserLogged(null);
-      setIsAuthenticated(false);
+  try {
+    await AuthService.logout();
+    clearAuthState();
+    setShouldPromptBiometric(false);
+  } catch (error) {
+    console.error('[Auth] Logout error:', error);
+    clearAuthState();
+    setShouldPromptBiometric(false);
+  }
+}, [clearAuthState]);
+
+  const initializeBiometric = useCallback(async () => {
+    const available = await BiometricService.isAvailable();
+    setBiometricAvailable(available);
+    if (available) {
+      const type = await BiometricService.getBiometricName();
+      setBiometricType(type);
+      const enabled = await BiometricService.isEnabled();
+      const hasCredentials = await BiometricService.hasStoredCredentials();
+      setBiometricEnabled(enabled && hasCredentials);
     }
   }, []);
 
-  /**
-   * Cargar perfil del usuario desde Supabase
-   */
-  const loadUserProfile = useCallback(async (): Promise<void> => {
-    // Evitar múltiples cargas simultáneas
-    if (isLoadingProfileRef.current) {
-      console.log('⏳ Profile already loading, skipping...');
-      return;
-    }
-
-    isLoadingProfileRef.current = true;
-    console.log('👤 Loading user profile...');
-
-    try {
-      // Obtener usuario
-      const { data: { user } } = await supabase.auth.getUser();
-      
-      if (!user) {
-        console.log('❌ No user found');
-        setUserLogged(null);
-        setIsAuthenticated(false);
-        return;
+  const enableBiometric = useCallback(
+    async (username: string, password: string): Promise<boolean> => {
+      const success = await BiometricService.enable(username, password);
+      if (success) {
+        setBiometricEnabled(true);
       }
+      return success;
+    },
+    []
+  );
 
-      // Cargar datos del perfil desde tabla profiles
-      const { data: profile, error: profileError } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', user.id)
-        .single();
-
-      if (profileError || !profile) {
-        console.error('Error loading profile:', profileError);
-        setError('Error al cargar el perfil del usuario');
-        setUserLogged(null);
-        setIsAuthenticated(false);
-        await supabase.auth.signOut();
-        return;
-      }
-
-      // Verificar que la empresa esté activa
-      if (!profile.company_active) {
-        console.log('❌ Company not active');
-        setError('La empresa no se encuentra activa');
-        setUserLogged(null);
-        setIsAuthenticated(false);
-        await supabase.auth.signOut();
-        return;
-      }
-
-      const userData: User = {
-        userId: profile.id,
-        name: profile.name || '',
-        email: profile.email || '',
-        role: profile.role || 'user',
-        companyName: profile.company_name || '',
-        companyActive: profile.company_active,
-        paths: profile.paths || [],
-        customRole: profile.custom_role,
-        companyId: profile.company_id || '',
-      };
-
-      console.log('✅ Profile loaded successfully:', userData.name);
-      setUserLogged(userData);
-      setIsAuthenticated(true);
-
-      // Guardar en storage (no bloqueante)
-      storage.setItem(STORAGE_KEYS.SESSION_KEY, 'true').catch(console.error);
-      storage.setItem(STORAGE_KEYS.USER_DATA_KEY, JSON.stringify(userData)).catch(console.error);
-    } catch (err) {
-      console.error('Error in loadUserProfile:', err);
-      setUserLogged(null);
-      setIsAuthenticated(false);
-    } finally {
-      isLoadingProfileRef.current = false;
-    }
+  const disableBiometric = useCallback(async () => {
+    await BiometricService.disable();
+    setBiometricEnabled(false);
   }, []);
 
-  /**
-   * Login: autentica al usuario con Supabase
-   */
-  const login = useCallback(
-    async (email: string, password: string): Promise<boolean> => {
+  const loginWithBiometric = useCallback(async (): Promise<boolean> => {
+    if (isAuthenticated) {
+      return true;
+    }
+
+    setError(null);
+    setShouldPromptBiometric(false);
+
+    try {
+      const credentials = await BiometricService.getCredentials();
+
+      if (!credentials) {
+        return false;
+      }
+
       setIsLoading(true);
-      setError('');
+
+      const result = await AuthService.login({
+        username: credentials.username,
+        password: credentials.password,
+      });
+
+      if (result.success && result.user) {
+        setUser(result.user);
+        setIsAuthenticated(true);
+        return true;
+      } else {
+        setError('Credenciales inválidas. Por favor ingresa tu contraseña.');
+        await BiometricService.disable();
+        setBiometricEnabled(false);
+        return false;
+      }
+    } catch (err) {
+      console.error('[Auth] Biometric login error:', err);
+      setError('Error de conexión');
+      return false;
+    } finally {
+      setIsLoading(false);
+    }
+  }, [isAuthenticated]);
+
+  const login = useCallback(
+    async (credentials: LoginCredentials): Promise<boolean> => {
+      setIsLoading(true);
+      setError(null);
+      setShouldPromptBiometric(false);
 
       try {
-        console.log('🔐 Attempting login...');
-        
-        const { data, error: authError } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+        const result = await AuthService.login(credentials);
 
-        if (authError) {
-          console.error('Auth error:', authError.message);
-          setError(authError.message === 'Invalid login credentials' 
-            ? 'Usuario o contraseña incorrectas' 
-            : authError.message);
+        if (result.success && result.user) {
+          setUser(result.user);
+          setIsAuthenticated(true);
+
+          if (biometricAvailable && !biometricEnabled) {
+            setTimeout(() => {
+              Alert.alert(
+                `Habilitar ${biometricType}`,
+                `¿Deseas usar ${biometricType} para iniciar sesión más rápido?`,
+                [
+                  { text: 'No, gracias', style: 'cancel' },
+                  {
+                    text: 'Sí, habilitar',
+                    onPress: () => enableBiometric(credentials.username, credentials.password),
+                  },
+                ]
+              );
+            }, 500);
+          }
+
+          return true;
+        } else {
+          setError(result.error || 'Error al iniciar sesión');
           return false;
         }
-
-        if (!data.user) {
-          setError('Error al iniciar sesión');
-          return false;
-        }
-
-        // Cargar perfil del usuario
-        await loadUserProfile();
-        return true;
-      } catch (err: any) {
-        console.error('Login error:', err);
-        setError(err.message || 'Error al iniciar sesión');
+      } catch (err) {
+        setError('Error de conexión');
         return false;
       } finally {
         setIsLoading(false);
       }
     },
-    [loadUserProfile]
+    [biometricAvailable, biometricEnabled, biometricType, enableBiometric]
   );
 
-  /**
-   * Refresh Session: verifica y refresca la sesión de Supabase
-   */
   const refreshSession = useCallback(async (): Promise<boolean> => {
     try {
-      console.log('🔄 Refreshing session...');
-      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-      
-      if (sessionError || !session) {
-        console.log('❌ No valid session');
+      const hasTokens = await initializeTokens();
+      if (!hasTokens) {
         await logout();
         return false;
       }
 
-      await loadUserProfile();
-      return true;
-    } catch (err) {
-      console.error('Error refreshing session:', err);
+      const storedUser = await AuthService.getCurrentUser();
+      if (storedUser) {
+        setUser(storedUser);
+        setIsAuthenticated(true);
+        return true;
+      }
+
+      return false;
+    } catch {
       await logout();
       return false;
     }
-  }, [logout, loadUserProfile]);
+  }, [logout]);
 
-  /**
-   * Effect: Inicialización - restaurar sesión si existe
-   * Se ejecuta SOLO UNA VEZ con timeout de seguridad
-   */
-  useEffect(() => {
-    // Evitar múltiples inicializaciones
-    if (isInitializedRef.current) {
-      console.log('⚠️ Already initialized, skipping...');
-      return;
+  const clearError = useCallback(() => {
+    setError(null);
+  }, []);
+
+  const initializeAuth = useCallback(async () => {
+    try {
+      await initializeBiometric();
+
+      const hasSession = await AuthService.hasActiveSession();
+      if (!hasSession) {
+        setShouldPromptBiometric(true);
+        setIsLoading(false);
+        return;
+      }
+
+      const hasTokens = await initializeTokens();
+      if (!hasTokens) {
+        setShouldPromptBiometric(true);
+        await AuthService.logout();
+        setIsLoading(false);
+        return;
+      }
+
+      const token = getAccessToken();
+      if (token && !isTokenExpired(token)) {
+        const storedUser = await AuthService.getCurrentUser();
+        if (storedUser) {
+          setUser(storedUser);
+          setIsAuthenticated(true);
+          setShouldPromptBiometric(false);
+        }
+      } else {
+        setShouldPromptBiometric(true);
+      }
+    } catch (err) {
+      console.error('[AuthContext] Error initializing:', err);
+      setShouldPromptBiometric(true);
+    } finally {
+      setIsLoading(false);
     }
+  }, [initializeBiometric]);
 
-    let timeoutId: ReturnType<typeof setTimeout>;
-
-    const initAuth = async () => {
-      isInitializedRef.current = true;
-      console.log('🚀 Initializing auth...');
-
-      try {
-        const { data: { session } } = await supabase.auth.getSession();
-
-        if (session) {
-          console.log('📦 Found existing session');
-          await loadUserProfile();
-        } else {
-          console.log('📭 No existing session');
-        }
-      } catch (err) {
-        console.error('Error initializing auth:', err);
-        setUserLogged(null);
-        setIsAuthenticated(false);
-      } finally {
-        clearTimeout(timeoutId);
-        console.log('✅ Initialization complete');
-        setIsInitializing(false);
-      }
-    };
-
-    // Timeout de seguridad: si después de 15 segundos no termina, forzar fin
-    timeoutId = setTimeout(() => {
-      if (isInitializing) {
-        console.warn('⚠️ Auth initialization timeout, forcing complete');
-        setIsInitializing(false);
-        setUserLogged(null);
-        setIsAuthenticated(false);
-      }
-    }, 15000);
-
-    initAuth();
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []); // Sin dependencias - se ejecuta solo al montar
-
-  /**
-   * Effect: Listener de cambios de autenticación de Supabase
-   */
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        console.log('🔔 Auth state changed:', event);
-
-        // Solo procesar si ya se inicializó
-        if (!isInitializedRef.current) {
-          console.log('⏳ Not initialized yet, skipping auth state change');
-          return;
-        }
-
-        switch (event) {
-          case 'SIGNED_IN':
-            if (session && !isAuthenticated) {
-              await loadUserProfile();
-            }
-            break;
-          case 'SIGNED_OUT':
-            setUserLogged(null);
-            setIsAuthenticated(false);
-            break;
-          case 'TOKEN_REFRESHED':
-            console.log('🔄 Token refreshed');
-            break;
-        }
-      }
-    );
-
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, [isAuthenticated, loadUserProfile]);
-
-  /**
-   * Effect: Refresh cuando la app vuelve al foreground
-   */
-  useEffect(() => {
-    if (!isAuthenticated) return;
-
-    if (Platform.OS === 'web') {
-      const handleVisibilityChange = () => {
-        if (document.visibilityState === 'visible') {
+  const handleAppStateChange = useCallback(
+    (nextAppState: AppStateStatus) => {
+      if (
+        appState.current.match(/inactive|background/) &&
+        nextAppState === 'active'
+      ) {
+        if (isAuthenticated && shouldRefreshToken()) {
           refreshSession();
         }
-      };
-
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-
-      return () => {
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-      };
-    }
-
-    const subscription = AppState.addEventListener('change', (nextAppState) => {
-      if (nextAppState === 'active') {
-        refreshSession();
       }
+      appState.current = nextAppState;
+    },
+    [isAuthenticated, refreshSession]
+  );
+
+  useEffect(() => {
+    if (isInitialized.current) return;
+    isInitialized.current = true;
+    initializeAuth();
+  }, [initializeAuth]);
+
+  useEffect(() => {
+    const unsubscribe = onTokenExpired(() => {
+      setShouldPromptBiometric(true);
+      clearAuthState();
     });
+    return () => { unsubscribe(); };
+  }, [clearAuthState]);
 
-    return () => {
-      subscription.remove();
-    };
-  }, [isAuthenticated, refreshSession]);
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', handleAppStateChange);
+    return () => { subscription.remove(); };
+  }, [handleAppStateChange]);
 
-  const clearError = useCallback(() => setError(''), []);
-
-  const contextValue = useMemo(
+  const contextValue = useMemo<AuthContextType>(
     () => ({
+      user,
+      isAuthenticated,
+      isLoading,
+      error,
       login,
       logout,
-      loadUserProfile,
-      isAuthenticated,
-      userLogged,
-      setUserLogged,
-      setIsAuthenticated,
-      isLoading,
-      isInitializing,
-      error,
-      clearError,
       refreshSession,
+      clearError,
+      biometricAvailable,
+      biometricEnabled,
+      biometricType,
+      enableBiometric,
+      disableBiometric,
+      loginWithBiometric,
+      shouldPromptBiometric,
+      clearBiometricPrompt,
     }),
     [
+      user,
+      isAuthenticated,
+      isLoading,
+      error,
       login,
       logout,
-      loadUserProfile,
-      isAuthenticated,
-      userLogged,
-      isLoading,
-      isInitializing,
-      error,
-      clearError,
       refreshSession,
+      clearError,
+      biometricAvailable,
+      biometricEnabled,
+      biometricType,
+      enableBiometric,
+      disableBiometric,
+      loginWithBiometric,
+      shouldPromptBiometric,
+      clearBiometricPrompt,
     ]
   );
 
-  return <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={contextValue}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 
-/**
- * Hook para usar el contexto de autenticación
- */
-export function useAuthContext() {
+export function useAuth() {
   const context = useContext(AuthContext);
-  
-  if (!context) {
-    throw new Error('useAuthContext must be used within AuthContextProvider');
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
   }
-  
   return context;
 }
