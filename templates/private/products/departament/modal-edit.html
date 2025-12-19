@@ -1,0 +1,66 @@
+
+<dialog id="modal_edit" class="modal">
+    <div class="modal-box relative">
+        <div id="modal-edit-loading-overlay" class="hidden absolute inset-0 bg-base-100/80 backdrop-blur-sm z-50 rounded-lg flex items-center justify-center">
+            <div class="text-center">
+                <span class="loading loading-bars loading-lg"></span>
+                <p class="mt-3 text-sm font-medium">Actualizando departamento...</p>
+            </div>
+        </div>
+        <form method="dialog">
+            <div class="modal-header flex items-center justify-between">
+                <h3 class="font-bold text-sm">Editar Departamento</h3>
+                <button class="btn btn-link" type="reset" onclick="modal_edit.close()">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            
+            <legend class="fieldset-legend text-sm">Departamento:</legend>
+            <label class="input w-full validator">
+                <i data-lucide="boxes" class="w-5 h-5 opacity-50"></i>
+                <input 
+                    id="edit-name-input"
+                    required 
+                    pattern="[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ0-9\s\-]*" 
+                    minlength="3" 
+                    maxlength="25" 
+                    type="text" 
+                    class="grow"
+                    placeholder="Ej: Bebidas" 
+                />
+            </label>
+            
+            <legend class="fieldset-legend text-sm">Descripción:</legend>
+            <label class="input w-full">
+                <i data-lucide="pen-line" class="w-5 h-5 opacity-50"></i>
+                <input 
+                    id="edit-description-input"
+                    type="text" 
+                    class="grow" 
+                    placeholder="Ej: Bebidas alcoholicas y no alcoholicas" 
+                />
+                <span class="badge badge-neutral badge-xs">Optional</span>
+            </label>
+            
+            <p class="validator-hint">
+                El departamento debe comenzar con una letra y puede contener letras, números y guiones.
+                Longitud: 3-25 caracteres.
+            </p>
+            
+            <div class="flex justify-end gap-2">
+                <button class="btn btn-outline mt-4" type="reset" onclick="modal_edit.close()">
+                    CANCELAR
+                </button>
+                <button class="btn btn-primary mt-4" id="btn-update">
+                    ACTUALIZAR
+                </button>
+            </div>
+        </form>
+    </div>
+</dialog>
+
+<style>
+    .input.validator:has(input:valid) {
+        border-color: oklch(var(--bc) / 0.2);
+    }
+</style>

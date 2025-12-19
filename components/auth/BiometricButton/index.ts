@@ -1,1 +1,0 @@
-export { BiometricButton } from './BiometricButton';

@@ -1,0 +1,223 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Gestión de Productos{% endblock %}
+
+{% block content %}
+<!-- Skeleton de carga inicial -->
+<div id="initial-skeleton" class="skeleton h-full w-full rounded-lg flex items-center justify-center">
+  <div>
+    <span class="loading loading-bars w-16 h-16"></span>
+    <span class="block text-center text-base-content/50 text-sm">Cargando</span>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<div id="app-content" class="hidden p-4">
+  <!-- Header -->
+  <div class="items-center bg-base-100 rounded-lg text-center gap-4 p-4 sm:flex sm:text-left border border-base-300 mb-4">
+    <div>
+      <h1 class="text-2xl font-bold">Gestión de Productos</h1>
+      <p class="text-base-content/70 text-sm mt-1">Transfiere productos entre departamentos y categorías</p>
+    </div>
+  </div>
+
+  <!-- Card principal de transferencia -->
+  <div class="card bg-base-100 border border-base-300">
+    <div class="card-body p-4">
+      
+      <!-- Sección Origen -->
+      <div class="mb-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label py-1">
+              <span class="label-text text-xs">Departamento origen</span>
+            </label>
+            <select id="source-department" class="select select-bordered select-sm w-full">
+              <option value="">Seleccionar...</option>
+            </select>
+          </div>
+          <div>
+            <label class="label py-1">
+              <span class="label-text text-xs">Categoría origen</span>
+            </label>
+            <select id="source-category" class="select select-bordered select-sm w-full" disabled>
+              <option value="">Todas las categorías</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Panel de Transferencia -->
+      <div class="flex flex-col lg:flex-row gap-2">
+        
+        <!-- Panel Izquierdo - Productos Disponibles -->
+        <div class="flex-1 min-w-0">
+          <div class="border border-base-300 rounded-lg overflow-hidden">
+            <!-- Header -->
+            <div class="p-3 bg-base-200/50 border-b border-base-300">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold text-sm">Productos Disponibles</h3>
+                <div class="flex items-center gap-2">
+                  <span id="loading-available" class="loading loading-spinner loading-xs hidden"></span>
+                  <span class="badge badge-primary badge-sm" id="available-count">0 items</span>
+                </div>
+              </div>
+              <label class="input input-xs w-full">
+                <i data-lucide="search" class="w-3 h-3 opacity-50"></i>
+                <input type="text" id="search-available" placeholder="Buscar..." class="grow" />
+              </label>
+            </div>
+
+            <!-- Tabla -->
+            <div class="overflow-x-auto" style="height: 320px; max-height: 320px;">
+              <table class="table table-xs table-pin-rows">
+                <thead>
+                  <tr>
+                    <th class="w-10">
+                      <input type="checkbox" id="select-all-available" class="checkbox checkbox-xs" />
+                    </th>
+                    <th>Nombre</th>
+                    <th class="hidden sm:table-cell">Tag</th>
+                    <th class="hidden lg:table-cell">Descripción</th>
+                  </tr>
+                </thead>
+                <tbody id="available-products"></tbody>
+              </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-2 border-t border-base-300 bg-base-200/30 flex justify-between items-center">
+              <div class="join">
+                <button class="join-item btn btn-xs" id="prev-available" disabled>«</button>
+                <button class="join-item btn btn-xs btn-disabled" id="page-available">1/1</button>
+                <button class="join-item btn btn-xs" id="next-available" disabled>»</button>
+              </div>
+              <span class="text-xs text-base-content/60" id="selected-available-count">0 seleccionados</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles Centrales - Flechas -->
+        <div class="flex lg:flex-col items-center justify-center gap-1 py-2 lg:py-0 lg:px-1">
+          <button id="btn-move-right" class="btn btn-sm btn-square btn-primary" disabled title="Mover seleccionados">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+          <button id="btn-move-all-right" class="btn btn-sm btn-square btn-outline btn-primary" disabled title="Mover todos">
+            <i data-lucide="chevrons-right" class="w-4 h-4"></i>
+          </button>
+          <button id="btn-move-left" class="btn btn-sm btn-square btn-primary" disabled title="Remover seleccionados">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <button id="btn-move-all-left" class="btn btn-sm btn-square btn-outline btn-primary" disabled title="Remover todos">
+            <i data-lucide="chevrons-left" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Panel Derecho - Productos a Transferir -->
+        <div class="flex-1 min-w-0">
+          <div class="border border-base-300 rounded-lg overflow-hidden">
+            <!-- Header -->
+            <div class="p-3 bg-base-200/50 border-b border-base-300">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold text-sm">Productos a Transferir</h3>
+                <span class="badge badge-secondary badge-sm" id="transfer-count">0 items</span>
+              </div>
+              <label class="input input-xs w-full">
+                <i data-lucide="search" class="w-3 h-3 opacity-50"></i>
+                <input type="text" id="search-transfer" placeholder="Buscar..." class="grow" />
+              </label>
+            </div>
+
+            <!-- Tabla -->
+            <div class="overflow-x-auto" style="height: 320px; max-height: 320px;">
+              <table class="table table-xs table-pin-rows">
+                <thead>
+                  <tr>
+                    <th class="w-10">
+                      <input type="checkbox" id="select-all-transfer" class="checkbox checkbox-xs" />
+                    </th>
+                    <th>Nombre</th>
+                    <th class="hidden sm:table-cell">Tag</th>
+                    <th class="hidden lg:table-cell">Descripción</th>
+                  </tr>
+                </thead>
+                <tbody id="transfer-products"></tbody>
+              </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-2 border-t border-base-300 bg-base-200/30 flex justify-between items-center">
+              <div class="join">
+                <button class="join-item btn btn-xs" id="prev-transfer" disabled>«</button>
+                <button class="join-item btn btn-xs btn-disabled" id="page-transfer">1/1</button>
+                <button class="join-item btn btn-xs" id="next-transfer" disabled>»</button>
+              </div>
+              <span class="text-xs text-base-content/60" id="selected-transfer-count">0 seleccionados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Destino -->
+      <div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="label py-1">
+              <span class="label-text text-xs">Departamento destino</span>
+            </label>
+            <select id="target-department" class="select select-bordered select-sm w-full">
+              <option value="">Seleccionar departamento</option>
+              <option value="unassigned">Sin asignar</option>
+            </select>
+          </div>
+          <div>
+            <label class="label py-1">
+              <span class="label-text text-xs">Categoría destino</span>
+            </label>
+            <select id="target-category" class="select select-bordered select-sm w-full" disabled>
+              <option value="">Seleccionar categoría</option>
+              <option value="unassigned">Sin asignar</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button id="btn-transfer" class="btn btn-sm btn-primary w-full" disabled>
+              <i data-lucide="arrow-right-left" class="w-4 h-4"></i>
+              Transferir <span id="transfer-summary-count">0</span> productos
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Sin permisos -->
+<div id="no-permission-state" class="hidden">
+  <section class="min-h-[70vh] grid place-items-center">
+    <div class="text-center items-center flex flex-col">
+      <i data-lucide="shield-x" class="w-24 h-24 opacity-30 mb-6"></i>
+      <h2 class="text-2xl font-bold mb-2">Sin permisos</h2>
+      <p class="text-base-content/70">No tienes permisos para ver esta sección.</p>
+    </div>
+  </section>
+</div>
+
+<!-- Preview del destino (oculto por defecto) -->
+<div id="target-preview" class="hidden">
+  <span id="target-product-count"></span>
+  <ul id="target-products-list"></ul>
+</div>
+
+<!-- Loading para destino -->
+<span id="loading-target" class="hidden"></span>
+
+{% include 'private/product_management/modal-confirm.html' %}
+
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'private/js/api/products.js' %}" defer></script>
+<script type="module" src="{% static 'private/js/product-management/index.js' %}"></script>
+{% endblock %}

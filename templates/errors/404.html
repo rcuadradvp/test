@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página No Encontrada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .error-container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #667eea;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .error-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .error-message {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .btn-dashboard {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin: 5px;
+        }
+        
+        .btn-dashboard:hover {
+            background: #5568d3;
+        }
+        
+        .btn-login {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin: 5px;
+        }
+        
+        .btn-login:hover {
+            background: #2c3e50;
+        }
+        
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="icon">🔍</div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Página No Encontrada</h1>
+        <p class="error-message">
+            Lo sentimos, la página que estás buscando no existe o no tienes permisos para acceder a ella.
+        </p>
+        
+        {% if is_authenticated %}
+            <a href="/dashboard/" class="btn-dashboard">🏠 Volver al Dashboard</a>
+        {% else %}
+            <a href="/" class="btn-login">🔐 Iniciar Sesión</a>
+        {% endif %}
+    </div>
+</body>
+</html>

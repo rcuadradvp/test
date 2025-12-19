@@ -1,0 +1,67 @@
+<!-- frontend/templates/private/includes/sidebar_expanded.html -->
+{% load static %}
+<div class="drawer-side">
+  <label
+    for="sidebar-toggle"
+    aria-label="close sidebar"
+    class="drawer-overlay"
+  ></label>
+  <aside class="h-full pr-0 pl-2 pt-2 pb-2 transition-all duration-300 sidebar-container w-68" data-expanded="true">
+    <div class="border bg-base-100 border-base-300 rounded-lg h-full flex flex-col shadow-xl">
+      
+      <!-- Header del sidebar -->
+      <div class="p-3 mt-3 border-b border-base-300 sidebar-header">
+        <div class="flex items-center gap-3 mb-3">
+          <img id="logo" src="{% static 'assets/images/logoSand.png' %}" class="w-8 h-8 logo" alt="Logo">
+          <span class="text-md font-bold sidebar-text text-primary">
+            {% if company_data %}
+              {{ company_data.name|title }}
+            {% else %}
+              Distribuidora Cunaco
+            {% endif %}
+          </span>
+        </div>
+      </div>
+      <!-- Menú del sidebar -->
+      <div class="flex-1 mt-4 p-3 sidebar-menu">
+        <p class="text-xs font-semibold uppercase tracking-wider mb-4 sidebar-text">MENÚ</p>
+        
+        {% if user_menu_items %}
+          <ul class="space-y-1">
+            {% for menu_item in user_menu_items %}
+            <li>
+              <a href="{{ menu_item.url }}" 
+                 class="flex items-center gap-3 p-3 hover:bg-base-300 rounded-lg transition-colors 
+                        {% if request.path == menu_item.url %}bg-primary text-white hover:bg-primary{% endif %}" 
+                 title="{{ menu_item.name }}">
+                
+                <!-- Icono dinámico -->
+                <i data-lucide="{{ menu_item.icon|default:'circle' }}" class="w-5 h-5 flex-shrink-0"></i>
+                
+                <!-- Texto del menú -->
+                <span class="sidebar-text">{{ menu_item.name }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <!-- dashboard si no hay menús -->
+          <ul class="space-y-1">
+            <li>
+              <a href="/dashboard/" class="flex items-center gap-3 p-3 hover:bg-base-300 rounded-lg transition-colors {% if request.resolver_match.url_name == 'dashboard' %}bg-primary text-white hover:bg-primary{% endif %}" title="Dashboard">
+                <i data-lucide="home" class="w-5 h-5 flex-shrink-0"></i>
+                <span class="sidebar-text">Panel de control</span>
+              </a>
+            </li>
+            <li>
+              <div class="p-3 text-center text-base-content/50">
+                <i data-lucide="alert-circle" class="w-5 h-5 mx-auto mb-1"></i>
+                <p class="text-xs sidebar-text">No hay menús configurados</p>
+              </div>
+            </li>
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </aside>
+</div>

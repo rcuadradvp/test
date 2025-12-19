@@ -1,0 +1,12 @@
+<!-- frontend/templates/public/public_base.html -->
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div class="min-h-screen bg-base-200 flex flex-col">
+    <main class="flex-1 flex items-center justify-center p-4">
+        <div class="w-full">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+</div>
+{% endblock %}

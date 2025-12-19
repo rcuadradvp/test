@@ -1,0 +1,109 @@
+<!-- frontend/templates/public/login.html - SIMPLIFICAR COMPLETAMENTE -->
+{% extends "public/public_base.html" %} 
+{% load static %} 
+{% block title %}Iniciar Sesión{% endblock %} 
+
+{% block content %}
+<div class="fixed top-4 right-4 z-50">
+  {% include 'includes/toggle-theme.html' %}
+</div>
+
+<!-- Hero Layout -->
+<div class="hero min-h-screen -m-4">
+  <div class="hero-content flex-col lg:flex-row-reverse max-w-6xl w-full">
+    <!-- Right Side - Login Form -->
+    <div class="card border-base-300 border-1 flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+      <div class="card-body">
+        <!-- Logo/Header -->
+        <div class="text-center mb-6">
+          <h1 class="text-5xl font-bold text-primary">ERP Ventas</h1>
+          <p class="text-base-content">Accede a tu cuenta</p>
+        </div>
+
+        <!-- Mensajes -->
+        <div id="message-container" class="mb-4"></div>
+
+        <form id="login-form" class="space-y-4">
+          <!-- Email Field -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-medium">Email</span>
+            </label>
+            <input 
+              type="email" 
+              name="email"
+              placeholder="tu@empresa.com" 
+              class="input input-bordered w-full" 
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-medium">Contraseña</span>
+            </label>
+            <input 
+              type="password" 
+              name="password"
+              placeholder="••••••••" 
+              class="input input-bordered w-full" 
+              required
+              autocomplete="current-password"
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-control mt-6">
+            <button type="submit" class="btn btn-primary" id="login-btn">
+              <span id="login-text">Iniciar Sesión</span>
+              <span id="login-loading" class="loading loading-spinner loading-sm hidden"></span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Footer Links -->
+        <div class="divider"></div>
+        <div class="text-center text-sm">
+          <a class="link link-hover">¿Olvidaste tu contraseña?</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Side - Hero Content -->
+    <div class="text-center lg:text-left lg:w-1/2">
+      <div class="max-w-lg">
+        <h1 class="text-5xl font-bold text-base-content">
+          Bienvenido a tu
+          <span class="text-primary">Sistema ERP</span>
+        </h1>
+        <p class="py-6 text-xl text-base-content">
+          Gestiona tu empresa de manera eficiente. Control total de ventas,
+          inventario, clientes y más.
+        </p>
+
+        <!-- Features -->
+        <div class="space-y-4 text-left">
+          <div class="flex items-center gap-3">
+            <div class="badge badge-primary badge-lg">✓</div>
+            <span>Gestión de Ventas Completa</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="badge badge-primary badge-lg">✓</div>
+            <span>Control de Inventario</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="badge badge-primary badge-lg">✓</div>
+            <span>Gestión Multi-Usuario</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 
+
+{% block extra_js %}
+  <script type="module" src="{% static 'public/js/login.js' %}"></script>
+{% endblock %}

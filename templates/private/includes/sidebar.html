@@ -1,0 +1,56 @@
+<!-- frontend/templates/private/includes/sidebar.html -->
+{% load static %}
+<div class="drawer-side">
+  <label
+    for="sidebar-toggle"
+    aria-label="close sidebar"
+    class="drawer-overlay"
+  ></label>
+  <aside
+    class="h-full pr-0 pl-2 pt-2 pb-2 transition-all duration-300 sidebar-container"
+    data-expanded="true"
+  >
+    <div
+      class="border bg-[var(--color-sidebar)] border-base-300 rounded-lg h-full flex flex-col shadow-2xl overflow-hidden"
+    >
+      <div class="p-3 mt-3 border-b border-base-300 sidebar-header flex-shrink-0">
+        <a href="/panel-de-control/" class="flex items-center gap-3 mb-3">
+            <div class="sidebar-logo" role="img" aria-label="Logo"></div>
+            <span class="text-md font-bold sidebar-text text-[var(--color-text-sidebar)]">
+            {% if company_data %} {{ company_data.name|title }} {% else %}
+            DISTRIBUIDORA CUNACO {% endif %}</span>
+        </a>
+      </div>
+      <div class="flex-1 mt-4 p-2 sidebar-menu overflow-y-auto overflow-x-hidden">
+        <!-- Loading state -->
+        <div id="sidebar-loading" class="space-y-2">
+          <div class="flex items-center gap-2 p-3">
+            <span class="loading loading-spinner loading-sm"></span>
+            <span class="sidebar-text text-sm">Cargando menús...</span>
+          </div>
+        </div>
+        <ul id="sidebar-menu-items" class="space-y-1 hidden">
+          <!-- dinámicamente -->
+        </ul>
+        <!-- Error state -->
+        <div id="sidebar-error" class="hidden">
+          <div class="p-2 text-center text-base-content/50">
+            <i data-lucide="alert-circle" class="w-5 h-5 mx-auto mb-1"></i>
+            <p class="text-xs sidebar-text">Error cargando menús</p>
+          </div>
+        </div>
+
+        <!-- Sección General -->
+        <div class="mt-8">
+          <ul class="space-y-1">
+            <li id="config-menu-item" class="hidden">
+             
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script type="module" src="{% static 'private/js/template/sidebar.js' %}"></script>

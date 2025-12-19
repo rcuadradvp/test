@@ -1,0 +1,540 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Crear Producto{% endblock %}
+
+{% block content %}
+<!-- Skeleton de carga inicial -->
+<div id="initial-skeleton" class="skeleton h-full w-full rounded-lg flex items-center justify-center">
+  <div>
+    <span class="loading loading-bars w-16 h-16"></span>
+    <span class="block text-center text-base-content/50 text-sm">Cargando</span>
+  </div>
+</div>
+
+<!-- Estado sin permisos -->
+<div id="no-permission-state" class="hidden">
+  <section class="min-h-[70vh] grid place-items-center">
+    <div class="text-center items-center flex flex-col">
+      <i data-lucide="shield-x" class="w-24 h-24 opacity-30 mb-6"></i>
+      <h2 class="text-2xl font-bold mb-2">Acceso denegado</h2>
+      <p class="text-base-content/70 mb-6">No tienes permisos para crear productos.</p>
+      <a href="/productos/" class="btn btn-primary">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        Volver a productos
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- Contenido principal -->
+<div id="app-content" 
+     class="hidden p-0 sm:p-4"
+     data-department-slug="{{ department_slug }}"
+     data-category-slug="{{ category_slug }}"
+     data-back-url="{{ back_url }}">
+  
+  <!-- Estado de carga -->
+  <div id="loading-container" class="hidden">
+    <div class="card bg-base-100 border border-base-400">
+      <div class="card-body">
+        <div class="flex flex-col items-center justify-center gap-3 py-12">
+          <span class="loading loading-spinner loading-lg"></span>
+          <p class="text-base-content/70">Cargando...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estado de error -->
+  <div id="error-state" class="hidden">
+    <div class="card bg-base-100 border border-base-400">
+      <div class="card-body items-center text-center py-12">
+        <i data-lucide="alert-triangle" class="w-16 h-16 text-error/50 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Error</h3>
+        <p id="error-message" class="text-base-content/70 mb-6">Ha ocurrido un error</p>
+        <div class="flex gap-2">
+          <a href="/productos/" class="btn btn-ghost">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            Volver
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido del formulario -->
+  <div id="container" class="hidden">
+    <!-- Header -->
+    <div class="bg-base-100 rounded-lg border border-base-400 p-4 mb-4">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Breadcrumb y título -->
+        <div class="flex items-center gap-3 flex-1">
+          <button id="btn-back" class="btn btn-ghost btn-sm btn-square">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          </button>
+          <div class="flex-1">
+            <div class="text-xs breadcrumbs p-0 mb-1">
+              <ul>
+                <li><a href="/productos/" class="text-base-content/60 hover:text-primary">Productos</a></li>
+                <li class="text-base-content/60">Nuevo producto</li>
+              </ul>
+            </div>
+            <h1 class="text-xl font-bold">Crear nuevo producto</h1>
+          </div>
+        </div>
+        
+        <!-- Acciones -->
+        <div class="flex gap-2 items-center">
+          <button id="btn-cancel" class="btn btn-ghost btn-sm">
+            Cancelar
+          </button>
+          <button id="btn-create" class="btn btn-primary btn-sm">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            Crear producto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <form id="product-form" class="space-y-4">
+      
+      <!-- Grid principal: Información básica | Configuración -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-4">
+        
+        <!-- COLUMNA IZQUIERDA: Información básica -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body p-4">
+            <h3 class="font-semibold text-sm mb-3 flex items-center gap-2">
+              <i data-lucide="info" class="w-4 h-4 text-primary"></i>
+              Información básica
+            </h3>
+            
+            <div class="space-y-3">
+              
+              <!-- Nombre -->
+              <div>
+                <label class="label py-1">
+                  <span class="label-text text-xs">Nombre del producto <span class="text-error">*</span></span>
+                </label>
+                <input 
+                  type="text" 
+                  id="input-name" 
+                  class="input input-bordered w-full input-sm" 
+                  placeholder="Ej: Coca-Cola 2L"
+                  required
+                  minlength="3"
+                />
+              </div>
+              
+              <!-- Descripción (input con límite) -->
+              <div>
+                <label class="label py-1">
+                  <span class="label-text text-xs">Descripción</span>
+                  <span class="label-text-alt text-xs opacity-60">
+                    <span id="char-count">0</span>/50
+                  </span>
+                </label>
+                <input 
+                  type="text"
+                  id="input-description" 
+                  class="input input-bordered w-full input-sm" 
+                  placeholder="Descripción breve del producto"
+                  maxlength="50"
+                />
+              </div>
+              
+              <!-- Grid para códigos de barras (responsive) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- Código de barras -->
+                <div>
+                  <label class="label py-1">
+                    <span class="label-text text-xs">Código de barras <span class="text-error">*</span></span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="input-barcode" 
+                    class="input input-bordered w-full input-sm font-mono"
+                    placeholder="8, 12, 13 o 14 dígitos"
+                    required
+                    minlength="8"
+                  />
+                </div>
+                
+                <!-- Código de barras paquete -->
+                <div>
+                  <label class="label py-1">
+                    <span class="label-text text-xs">Código de barras (paquete)</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="input-barcode-package" 
+                    class="input input-bordered w-full input-sm font-mono"
+                    placeholder="Opcional"
+                  />
+                </div>
+              </div>
+              
+              <!-- Grid para Departamento y Categoría (responsive) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- Departamento (solo display) -->
+                <div>
+                  <label class="label py-1">
+                    <span class="label-text text-xs">Departamento</span>
+                  </label>
+                  <div id="display-department" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-base-200/50 h-8">
+                    <i data-lucide="folder" class="w-4 h-4 text-primary"></i>
+                    <span class="text-sm">Sin asignar</span>
+                  </div>
+                </div>
+                
+                <!-- Categoría (solo display) -->
+                <div>
+                  <label class="label py-1">
+                    <span class="label-text text-xs">Categoría</span>
+                  </label>
+                  <div id="display-category" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-base-200/50 h-8">
+                    <i data-lucide="tag" class="w-4 h-4 text-primary"></i>
+                    <span class="text-sm">Sin asignar</span>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: Configuración (ancho fijo 280px en desktop) -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body p-3">
+            <h3 class="font-semibold text-xs mb-2 flex items-center gap-2">
+              <i data-lucide="settings" class="w-3.5 h-3.5 text-primary"></i>
+              Configuración
+            </h3>
+            
+            <div class="space-y-0.5">
+              
+              <!-- Es paquete -->
+              <div class="form-control">
+                <label class="label cursor-pointer py-1 justify-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="input-is-package" 
+                    class="checkbox checkbox-xs checkbox-primary"
+                  />
+                  <div class="flex-1">
+                    <span class="label-text text-xs font-medium">Es paquete</span>
+                    <p class="text-[9px] text-base-content/50 leading-tight">Precios e inventario</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Es bandeja -->
+              <div class="form-control">
+                <label class="label cursor-pointer py-1 justify-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="input-is-tray" 
+                    class="checkbox checkbox-xs checkbox-primary"
+                  />
+                  <div class="flex-1">
+                    <span class="label-text text-xs font-medium">Es bandeja</span>
+                    <p class="text-[9px] text-base-content/50 leading-tight">Precio bandeja</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Envase retornable -->
+              <div class="form-control">
+                <label class="label cursor-pointer py-1 justify-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="input-has-returnable" 
+                    class="checkbox checkbox-xs checkbox-primary"
+                  />
+                  <div class="flex-1">
+                    <span class="label-text text-xs font-medium">Envase retornable</span>
+                    <p class="text-[9px] text-base-content/50 leading-tight">Precio del envase</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Separador visual para impuestos -->
+              <div class="divider my-1 text-[9px] text-base-content/40">Impuestos</div>
+
+              <!-- Exento de IVA -->
+              <div class="form-control">
+                <label class="label cursor-pointer py-1 justify-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="input-is-tax-exempt" 
+                    class="checkbox checkbox-xs checkbox-primary"
+                  />
+                  <div class="flex-1">
+                    <span class="label-text text-xs font-medium">Exento de IVA</span>
+                    <p class="text-[9px] text-base-content/50 leading-tight">No aplica 19%</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Impuesto adicional (cigarrillos, alcohol, etc.) -->
+              <div class="form-control">
+                <label class="label cursor-pointer py-1 justify-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="input-has-extra-tax" 
+                    class="checkbox checkbox-xs checkbox-warning"
+                  />
+                  <div class="flex-1">
+                    <span class="label-text text-xs font-medium">Impuesto adicional</span>
+                    <p class="text-[9px] text-base-content/50 leading-tight">Alcohol, cigarrillos, etc.</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Campo porcentaje impuesto adicional (condicional) -->
+              <div id="field-extra-tax-rate" class="hidden pl-6 pt-1">
+                <div class="flex items-center gap-2">
+                  <input 
+                    type="text" 
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    id="input-extra-tax-rate" 
+                    class="input input-bordered input-xs w-16 text-center"
+                    placeholder="0"
+                    maxlength="3"
+                  />
+                  <span class="text-xs text-base-content/60">% adicional</span>
+                </div>
+              </div>
+
+              <!-- Separador visual -->
+              <div class="divider my-1"></div>
+
+              <!-- Estado activo -->
+              <div class="form-control">
+                <label class="label cursor-pointer py-1 justify-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="input-is-active" 
+                    class="checkbox checkbox-xs checkbox-primary"
+                    checked
+                  />
+                  <div class="flex-1">
+                    <span class="label-text text-xs font-medium">Producto activo</span>
+                    <p class="text-[9px] text-base-content/50 leading-tight">Visible venta</p>
+                  </div>
+                </label>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Precios e Inventario (grid 2 columnas en desktop, 1 en mobile) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        
+        <!-- PRECIOS -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body p-4">
+            <h3 class="font-semibold text-sm mb-3 flex items-center gap-2">
+              <i data-lucide="dollar-sign" class="w-4 h-4 text-primary"></i>
+              Precios
+            </h3>
+            
+            <!-- Grid 2 columnas en desktop, 1 en mobile -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+              
+              <!-- Precio costo -->
+              <div>
+                <label class="label py-1">
+                  <span class="label-text text-xs">Precio costo <span class="text-error">*</span></span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  id="input-cost-price" 
+                  class="input input-bordered w-full input-sm price-input"
+                  placeholder="$0"
+                  value=""
+                  data-raw-value="0"
+                />
+              </div>
+
+              <!-- Precio unitario -->
+              <div>
+                <label class="label py-1">
+                  <span class="label-text text-xs">Precio unitario</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  id="input-unit-price" 
+                  class="input input-bordered w-full input-sm price-input"
+                  placeholder="$0"
+                  value=""
+                  data-raw-value="0"
+                />
+              </div>
+
+              <!-- Precio Final (calculado) - Se muestra si hay algún impuesto -->
+              <div id="field-final-price" class="sm:col-span-2">
+                <label class="label py-1">
+                  <span class="label-text text-xs">Precio final</span>
+                  <span id="display-tax-info" class="label-text-alt text-[10px] text-base-content/50">IVA 19%</span>
+                </label>
+                <div class="flex items-center justify-center h-8 px-3 rounded-lg bg-success/10">
+                  <span id="display-final-price" class="font-semibold text-success text-sm">$0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Precios condicionales en 2 columnas desktop, 1 mobile -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              
+              <!-- Precio paquete (condicional) -->
+              <div id="field-package-price" class="hidden">
+                <label class="label py-1">
+                  <span class="label-text text-xs">Precio paquete</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  id="input-package-price" 
+                  class="input input-bordered w-full input-sm price-input"
+                  placeholder="$0"
+                  data-raw-value="0"
+                />
+              </div>
+
+              <!-- Precio bandeja (condicional) -->
+              <div id="field-tray-price" class="hidden">
+                <label class="label py-1">
+                  <span class="label-text text-xs">Precio bandeja</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  id="input-tray-price" 
+                  class="input input-bordered w-full input-sm price-input"
+                  placeholder="$0"
+                  data-raw-value="0"
+                />
+              </div>
+
+              <!-- Precio envase retornable (condicional) -->
+              <div id="field-container-price" class="hidden">
+                <label class="label py-1">
+                  <span class="label-text text-xs">Precio envase</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  id="input-container-price" 
+                  class="input input-bordered w-full input-sm price-input"
+                  placeholder="$0"
+                  data-raw-value="0"
+                />
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+
+        <!-- INVENTARIO -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body p-4">
+            <h3 class="font-semibold text-sm mb-3 flex items-center gap-2">
+              <i data-lucide="package" class="w-4 h-4 text-primary"></i>
+              Inventario
+            </h3>
+            
+            <!-- Grid 2 columnas desktop, 1 mobile -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+              
+              <!-- Stock inicial -->
+              <div>
+                <label class="label py-1">
+                  <span class="label-text text-xs">Stock inicial</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  id="input-stock-units" 
+                  class="input input-bordered w-full input-sm"
+                  placeholder="0"
+                  value="0"
+                />
+              </div>
+              
+              <!-- Stock mínimo -->
+              <div>
+                <label class="label py-1">
+                  <span class="label-text text-xs">Stock mínimo</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  id="input-min-stock" 
+                  class="input input-bordered w-full input-sm"
+                  placeholder="0"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <!-- Inventario condicional en 2 columnas desktop, 1 mobile -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+              <!-- Unidades por paquete (condicional) -->
+              <div id="field-units-per-package" class="hidden">
+                <label class="label py-1">
+                  <span class="label-text text-xs">Unid. por paq.</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  id="input-units-per-package" 
+                  class="input input-bordered w-full input-sm"
+                  placeholder="0"
+                />
+              </div>
+
+              <!-- Paquetes por bandeja (condicional) -->
+              <div id="field-packages-per-tray" class="hidden">
+                <label class="label py-1">
+                  <span class="label-text text-xs">Paq. por band.</span>
+                </label>
+                <input 
+                  type="text" 
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  id="input-packages-per-tray" 
+                  class="input input-bordered w-full input-sm"
+                  placeholder="0"
+                />
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'private/js/api/products.js' %}" defer></script>
+<script type="module" src="{% static 'private/js/products/product-create/index.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,271 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Usuarios{% endblock %}
+
+{% block content %}
+<div class="p-4 md:p-6">
+  <!-- <h1 class="text-xl font-bold mb-4 text-primary">Plantilla de Pruebas</h1> -->
+
+  <!-- grid responsivo: 1 columna en móvil, 2 en >=lg -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <!-- IZQUIERDA: Formulario -->
+    <div class="card bg-base-200 border border-[var(--color-card-border)] rounded-lg p-4 md:p-6">
+      <h2 class="text-lg font-semibold mb-4">Creación de Usuarios</h2>
+
+      <form id="addUserForm" class="space-y-4">
+        {% csrf_token %}
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="form-control">
+            <label class="label"><span class="label-text">Correo electrónico *</span></label>
+            <input type="email" name="email" class="input input-bordered w-full" placeholder="usuario@empresa.com" required>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text">Usuario *</span></label>
+            <input type="text" name="username" class="input input-bordered w-full" placeholder="usuario" required>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text">Nombre *</span></label>
+            <input type="text" name="first_name" class="input input-bordered w-full" placeholder="Nombre" required>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text">Apellido *</span></label>
+            <input type="text" name="last_name" class="input input-bordered w-full" placeholder="Apellido" required>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text">RUT *</span></label>
+            <input
+              type="text"
+              id="rutInput"
+              name="rut"
+              class="input input-bordered w-full"
+              inputmode="text"
+              placeholder="12.345.678-5"
+              title="Formato: 12.345.678-5 (DV puede ser K)"
+              required>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text">Teléfono</span></label>
+            <input
+              type="tel"
+              id="phoneInput"
+              name="phone"
+              class="input input-bordered w-full"
+              inputmode="tel"
+              placeholder="+56 9 1234 5678">
+          </div>
+
+          <div class="form-control md:col-span-2">
+            <label class="label"><span class="label-text">Rol *</span></label>
+            <select name="role" id="roleSelect" class="select select-bordered w-full" required>
+              <option value="">Cargando roles...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="form-control">
+            <label class="label"><span class="label-text">Contraseña *</span></label>
+            <input type="password" name="password" class="input input-bordered w-full" required>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text">Confirmar Contraseña *</span></label>
+            <input type="password" name="password_confirm" class="input input-bordered w-full" required>
+          </div>
+        </div>
+
+        <div class="form-control pt-2">
+          <button type="submit" class="btn btn-primary w-full">Guardar Usuario</button>
+        </div>
+
+        <div id="responseMessage" class="mt-2 text-center text-sm"></div>
+      </form>
+    </div>
+
+    <!-- DERECHA: Listado -->
+    <div class="card bg-base-200 border border-[var(--color-card-border)] rounded-lg p-4 md:p-6">
+      <h2 class="text-lg font-semibold mb-4">Listado de Usuarios</h2>
+
+      <div class="overflow-x-auto">
+        <table class="table w-full">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Correo</th>
+              <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <tr><td colspan="3" class="text-center text-base-content/60">Cargando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// --------- Utilidades de formateo ---------
+function formatRutLive(value) {
+  // Mantener solo dígitos y K/k
+  const clean = value.replace(/[^0-9kK]/g, '').toUpperCase();
+  if (!clean) return '';
+
+  const body = clean.slice(0, -1);
+  const dv = clean.slice(-1);
+
+  // Miles con puntos
+  const bodyWithDots = body.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return body ? `${bodyWithDots}-${dv}` : dv; // fallback por si solo hay 1 char
+}
+
+function formatPhoneCLLive(value) {
+  // Dejar solo dígitos
+  const digits = value.replace(/\D/g, '');
+  // Normalizar a Chile +56 9
+  let rest = digits;
+
+  // Quitar 56 si viene duplicado
+  if (rest.startsWith('56')) rest = rest.slice(2);
+  // Quitar 0 de larga distancia si viene
+  if (rest.startsWith('0')) rest = rest.slice(1);
+
+  // Forzar 9 al inicio del número móvil
+  if (!rest.startsWith('9')) {
+    rest = '9' + rest.replace(/^9*/, '');
+  }
+
+  // Tomar hasta 8 dígitos después del 9
+  const num = rest.slice(1).slice(0, 8); // 8 dígitos
+  const part1 = num.slice(0, 4);
+  const part2 = num.slice(4, 8);
+
+  let formatted = '+56 9';
+  if (part1) formatted += ' ' + part1;
+  if (part2) formatted += ' ' + part2;
+
+  return formatted;
+}
+
+// --------- Carga de datos ---------
+async function loadRoles() {
+  const sel = document.getElementById('roleSelect');
+  try {
+    const res = await fetch('/api/roles/');
+    const roles = await res.json();
+    sel.innerHTML = '<option value="">Seleccionar rol...</option>';
+    roles.forEach(r => {
+      // usa display_name si existe; sino name
+      const label = r.display_name || r.name || r.id;
+      const opt = document.createElement('option');
+      opt.value = r.id;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    });
+  } catch (e) {
+    sel.innerHTML = '<option value="">Error al cargar roles</option>';
+    console.error('Error roles:', e);
+  }
+}
+
+async function loadUsers() {
+  const tbody = document.getElementById('usersTableBody');
+  try {
+    const res = await fetch('/api/users/');
+    const users = await res.json();
+    if (!Array.isArray(users) || users.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="3" class="text-center text-base-content/60">Sin usuarios</td></tr>';
+      return;
+    }
+    tbody.innerHTML = users.map(u => `
+      <tr>
+        <td class="whitespace-nowrap">${u.username || ''}</td>
+        <td class="whitespace-nowrap">${u.email || ''}</td>
+        <td class="whitespace-nowrap">${u.role_name || u.role || ''}</td>
+      </tr>
+    `).join('');
+  } catch (e) {
+    console.error('Error usuarios:', e);
+    tbody.innerHTML = '<tr><td colspan="3" class="text-center text-error">Error al cargar usuarios</td></tr>';
+  }
+}
+
+// --------- Envío de formulario ---------
+async function submitForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const msg = document.getElementById('responseMessage');
+  msg.textContent = 'Procesando...';
+  msg.className = 'mt-2 text-center text-sm text-info';
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  // Validación simple de password
+  if (data.password !== data.password_confirm) {
+    msg.textContent = 'Las contraseñas no coinciden.';
+    msg.className = 'mt-2 text-center text-sm text-error';
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/users/create/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      msg.textContent = '✅ Usuario creado correctamente.';
+      msg.className = 'mt-2 text-center text-sm text-success';
+      form.reset();
+      // Recargar listado
+      await loadUsers();
+    } else {
+      const err = await res.json().catch(() => ({}));
+      msg.textContent = '❌ Error: ' + (err.detail || JSON.stringify(err));
+      msg.className = 'mt-2 text-center text-sm text-error';
+    }
+  } catch (err) {
+    console.error(err);
+    msg.textContent = '⚠️ No se pudo conectar con el servidor.';
+    msg.className = 'mt-2 text-center text-sm text-error';
+  }
+}
+
+// --------- Init ---------
+document.addEventListener('DOMContentLoaded', () => {
+  // Formateo en vivo de RUT
+  const rutInput = document.getElementById('rutInput');
+  rutInput.addEventListener('input', () => {
+    const caret = rutInput.selectionStart;
+    rutInput.value = formatRutLive(rutInput.value);
+    // (simplificado) dejamos el cursor al final tras formatear
+    rutInput.setSelectionRange(rutInput.value.length, rutInput.value.length);
+  });
+
+  // Formateo en vivo de teléfono
+  const phoneInput = document.getElementById('phoneInput');
+  phoneInput.addEventListener('input', () => {
+    phoneInput.value = formatPhoneCLLive(phoneInput.value);
+  });
+  // Primer placeholder correcto al foco
+  phoneInput.addEventListener('focus', () => {
+    if (!phoneInput.value.trim()) phoneInput.value = '+56 9 ';
+  });
+
+  // Cargar roles y usuarios
+  loadRoles();
+  loadUsers();
+
+  // Envío
+  document.getElementById('addUserForm').addEventListener('submit', submitForm);
+});
+</script>
+{% endblock %}

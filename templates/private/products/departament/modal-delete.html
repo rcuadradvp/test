@@ -1,0 +1,37 @@
+<dialog id="modal_delete_confirm" class="modal">
+    <div class="modal-box relative">
+        <div id="modal-delete-loading-overlay" class="hidden absolute inset-0 bg-base-100/80 backdrop-blur-sm z-50 rounded-lg flex items-center justify-center">
+            <div class="text-center">
+                <span class="loading loading-bars loading-lg"></span>
+                <p class="mt-3 text-sm font-medium">Eliminando departamento...</p>
+            </div>
+        </div>
+
+        <h3 class="font-bold text-lg mb-4">Confirmar eliminación</h3>
+        
+        <div class="alert alert-warning mb-4">
+            <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            <div>
+                <p class="font-semibold">¿Estás seguro de eliminar este departamento?</p>
+                <p class="text-sm mt-1" id="delete-item-name"></p>
+            </div>
+        </div>
+        
+        <p class="text-sm text-base-content/70 mb-4">
+            Esta acción no se puede deshacer. Todos los productos asociados quedarán sin departamento.
+        </p>
+        
+        <div class="flex justify-end gap-2">
+            <button class="btn btn-outline" id="btn-cancel-delete">
+                Cancelar
+            </button>
+            <button class="btn btn-error" id="btn-confirm-delete">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                Eliminar
+            </button>
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>

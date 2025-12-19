@@ -1,0 +1,57 @@
+<!-- frontend/templates/private/includes/sidebar_collapsed.html -->
+{% load static %}
+<div class="drawer-side">
+  <label
+    for="sidebar-toggle"
+    aria-label="close sidebar"
+    class="drawer-overlay"
+  ></label>
+  <aside class="h-full pr-0 pl-2 pt-2 pb-2 transition-all duration-300 sidebar-container" style="width: 80px;" data-expanded="false">
+    <div class="border bg-base-100 border-base-300 rounded-lg h-full flex flex-col shadow-xl">
+      
+      <!-- Header del sidebar -->
+      <div class="flex justify-center items-center mt-3 border-b border-base-300 sidebar-header" style="padding: 0.75rem;">
+        <div class="flex justify-center">
+          <img id="logo" src="{% static 'assets/images/logoSand.png' %}" class="w-8 h-8 logo" alt="Logo">
+        </div>
+      </div>
+
+      <div class="flex-1 mt-4 sidebar-menu" style="padding: 0.5rem 0.75rem;">
+        {% if user_menu_items %}
+          <ul class="space-y-1">
+            {% for menu_item in user_menu_items %}
+            <li>
+              <a href="{{ menu_item.url }}" 
+                 class="flex justify-center rounded-lg transition-colors 
+                        {% if request.path == menu_item.url %}bg-primary text-white hover:bg-primary{% else %}hover:bg-base-300{% endif %}" 
+                 style="padding: 0.75rem;"
+                 title="{{ menu_item.name }}">
+                
+                <!-- Solo icono -->
+                <i data-lucide="{{ menu_item.icon|default:'circle' }}" class="w-5 h-5 flex-shrink-0"></i>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <!-- Fallback: Solo dashboard si no hay menús -->
+          <ul class="space-y-1">
+            <li>
+              <a href="/dashboard/" 
+                 class="flex justify-center rounded-lg transition-colors {% if request.resolver_match.url_name == 'dashboard' %}bg-primary text-white hover:bg-primary{% else %}hover:bg-base-300{% endif %}" 
+                 style="padding: 0.75rem;"
+                 title="Panel de control">
+                <i data-lucide="home" class="w-5 h-5 flex-shrink-0"></i>
+              </a>
+            </li>
+            <li>
+              <div class="flex justify-center" style="padding: 0.75rem;">
+                <i data-lucide="alert-circle" class="w-5 h-5 text-base-content/50" title="No hay menús configurados"></i>
+              </div>
+            </li>
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </aside>
+</div>

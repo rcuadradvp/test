@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block pre_styles %}
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('initializing');
+  try {
+    const saved = (sessionStorage.getItem('sidebar_expanded_state') ?? 'true') === 'true';
+    root.classList.add(saved ? 'sidebar-expanded' : 'sidebar-collapsed');
+  } catch { root.classList.add('sidebar-expanded'); }
+})();
+</script>
+<link rel="stylesheet" href="{% static 'private/css/auth.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="drawer lg:drawer-open h-screen overflow-hidden bg-base-200">
+    <input id="sidebar-toggle" type="checkbox" class="drawer-toggle" />
+    
+    <!-- Contenido principal -->
+    <div class="drawer-content">
+        <!-- Navbar fijo -->
+        <div class="navbar-container">
+            {% include 'private/includes/navbar.html' %}
+        </div>
+        
+        <!-- Main wrapper con padding -->
+        <div class="main-content-wrapper">
+            <!-- Card que contiene todo el contenido -->
+            <div class="content-card border border-base-300 bg-base-100 rounded-lg shadow-lg">
+                <!-- Contenido con scroll -->
+                <div class="content-card-body bg-[var(--color-base-principal)]">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% include 'private/includes/sidebar.html' %}
+</div>
+
+<!-- Scripts del sistema de caché PRIMERO -->
+<script src="{% static 'private/js/cache-manager.js' %}"></script>
+<script src="{% static 'private/js/api/index.js' %}"></script>
+<script src="{% static 'private/js/api/auth.js' %}"></script>
+<script src="{% static 'private/js/utils/permissions-helper.js' %}"></script>
+<script src="{% static 'private/js/utils/message-helper.js' %}"></script>
+<!-- Scripts de template -->
+<script type="module" src="{% static 'private/js/template/toggle-sidebar.js' %}"></script>
+<script>
+// Inicializar helpers globales al cargar página
+
+</script>
+{% endblock %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script type="module" src="{% static 'private/js/template/navbar.js' %}"></script>
+  <script type="module" src="{% static 'private/js/logout.js' %}"></script>
+  {% block page_js %}{% endblock %}
+{% endblock %}
