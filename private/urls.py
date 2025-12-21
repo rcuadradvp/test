@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 from . import suppliers_views 
 from . import products_views
+from . import clients_views  # NUEVO: Importar vistas de clientes
 
 app_name = 'private'
 
@@ -37,8 +38,9 @@ urlpatterns = [
     path('crear-nuevo-producto/<slug:department_slug>/', products_views.product_create_view, name='product-create-department'),
     path('crear-nuevo-producto/<slug:department_slug>/<slug:category_slug>/', products_views.product_create_view, name='product-create-full'),
     
-    # Clientes
-    path('clients/', views.clients_view, name='clients'),
+    # ========== CLIENTES (NUEVO) ==========
+    path('clientes/', clients_views.clients_list_view, name='clients'),
+    path('clientes/<uuid:client_id>/', clients_views.client_detail_view, name='client-detail'),
     
     # Páginas de Super Admin (nivel 4+)
     path('usuarios/', views.users_view, name='users'),
@@ -51,6 +53,7 @@ urlpatterns = [
     # Gestión de Productos
     path('gestion-de-productos/', products_views.product_managment_view, name='product-management'),
     
-    # ========== PROVEEDORES (NUEVO) ==========
+    # ========== PROVEEDORES ==========
     path('proveedores/', suppliers_views.suppliers_list_view, name='suppliers'),
+    path('proveedores/<uuid:supplier_id>/', suppliers_views.supplier_detail_view, name='supplier-detail'),
 ]

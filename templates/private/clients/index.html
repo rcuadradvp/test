@@ -1,7 +1,7 @@
 {% extends "private/auth_base.html" %}
 {% load static %}
 
-{% block title %}Gestión de Proveedores{% endblock %}
+{% block title %}Gestión de Clientes{% endblock %}
 
 {% block content %}
 <!-- Skeleton de carga inicial (pantalla completa) con loading -->
@@ -17,8 +17,8 @@
   <!-- Header -->
   <div class="items-center bg-base-100 rounded-lg text-center gap-4 mb-6 p-4 sm:flex sm:text-left border border-base-400">
     <div>
-      <h1 class="text-2xl font-bold">Proveedores</h1>
-      <p class="text-base-content/70 text-sm">Administra los proveedores de tu negocio</p>
+      <h1 class="text-2xl font-bold">Clientes</h1>
+      <p class="text-base-content/70 text-sm">Administra los clientes de tu negocio</p>
     </div>
   </div>
 
@@ -30,14 +30,14 @@
         <div class="relative">
           <label class="input w-full">
             <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-base-content/50"></i>
-            <input type="text" id="search-input" placeholder="Buscar proveedor..." class="pl-10" />
+            <input type="text" id="search-input" placeholder="Buscar cliente..." class="pl-10" />
           </label>
         </div>
       </div>
 
       <div class="flex gap-2">
         <div>
-          {% include 'private/suppliers/modal-create.html' %}
+          {% include 'private/clients/modal-create.html' %}
         </div>
       </div>
     </div>
@@ -61,7 +61,9 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Proveedor</th>
+                <th>Cliente</th>
+                <th>Contacto</th>
+                <th>Deuda Actual</th>
               </tr>
             </thead>
             <tbody id="table-body"></tbody>
@@ -78,7 +80,7 @@
         <i data-lucide="archive-x" class="w-12 h-12 text-base-content/30"></i>
         <h3 class="text-xl font-semibold" id="empty-title">No hay datos</h3>
         <p class="text-base-content/70" id="empty-message">
-          No hay proveedores registrados
+          No hay clientes registrados
         </p>
       </div>
     </div>
@@ -88,7 +90,7 @@
     <div class="alert alert-error">
       <i data-lucide="alert-circle" class="w-5 h-5"></i>
       <div>
-        <h3 class="font-bold">Error al cargar proveedores</h3>
+        <h3 class="font-bold">Error al cargar clientes</h3>
         <p class="text-sm" id="error-message"></p>
       </div>
       <button id="btn-retry" class="btn btn-sm btn-ghost">Reintentar</button>
@@ -96,8 +98,8 @@
   </div>
 </div>
 
-{% include 'private/suppliers/modal-edit.html' %}
-{% include 'private/suppliers/modal-delete.html' %}
+{% include 'private/clients/modal-edit.html' %}
+{% include 'private/clients/modal-delete.html' %}
 
 <!-- Vista centrada cuando no hay permisos -->
 <div id="no-permission-state" class="hidden">
@@ -112,7 +114,7 @@
 {% endblock %}
 
 {% block page_js %}
-<script src="{% static 'private/js/api/suppliers.js' %}"></script>
+<script src="{% static 'private/js/api/clients.js' %}"></script>
 <!-- ES Modules -->
-<script type="module" src="{% static 'private/js/suppliers/index.js' %}"></script>
+<script type="module" src="{% static 'private/js/clients/index.js' %}"></script>
 {% endblock %}

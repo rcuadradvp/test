@@ -12,3 +12,16 @@ def suppliers_list_view(request):
     if redirect_response:
         return redirect_response
     return render(request, 'private/suppliers/index.html')
+
+def supplier_detail_view(request, supplier_id):
+    """
+    Detalle de un proveedor específico por UUID
+    URL: /proveedores/<uuid:supplier_id>/
+    """
+    redirect_response = check_auth(request)
+    if redirect_response:
+        return redirect_response
+    context = {
+        'supplier_id': str(supplier_id),
+    }
+    return render(request, 'private/suppliers/detail.html', context)

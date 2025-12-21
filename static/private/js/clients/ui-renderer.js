@@ -1,4 +1,4 @@
-// static/private/js/suppliers/ui-renderer.js
+// static/private/js/clients/ui-renderer.js
 
 import { Row } from './components/row.js';
 import { Card } from './components/card.js';
@@ -69,10 +69,10 @@ export class UIRenderer {
     
     if (searchInput?.value) {
       if (emptyTitle) emptyTitle.textContent = 'No se encontraron resultados';
-      if (emptyMessage) emptyMessage.textContent = `No hay proveedores que coincidan con "${searchInput.value}"`;
+      if (emptyMessage) emptyMessage.textContent = `No hay clientes que coincidan con "${searchInput.value}"`;
     } else {
-      if (emptyTitle) emptyTitle.textContent = 'No hay proveedores';
-      if (emptyMessage) emptyMessage.textContent = 'No hay proveedores registrados';
+      if (emptyTitle) emptyTitle.textContent = 'No hay clientes';
+      if (emptyMessage) emptyMessage.textContent = 'No hay clientes registrados';
     }
   }
 
@@ -87,8 +87,6 @@ export class UIRenderer {
     cardsContainer.innerHTML = '';
 
     data.forEach((item) => {
-      // Ya no necesitamos pasar permissions ni eventHandlers
-      // porque las filas solo navegan
       const row = Row.create(item);
       const card = Card.create(item);
 

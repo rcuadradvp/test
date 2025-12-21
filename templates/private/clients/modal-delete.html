@@ -1,0 +1,32 @@
+<!-- Modal Eliminar Cliente -->
+<dialog id="modal-delete-client" class="modal">
+  <div class="modal-box">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-lg font-bold">Confirmar Desactivación</h3>
+    </div>
+
+    <div class="py-4">
+      <div class="alert alert-warning">
+        <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+        <div>
+          <h4 class="font-bold">¿Estás seguro?</h4>
+          <p class="text-sm">
+            Estás a punto de desactivar el cliente 
+            <span class="font-semibold" id="delete-client-name"></span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-action">
+      <button type="button" class="btn btn-ghost" data-action="cancel">Cancelar</button>
+      <button type="button" class="btn btn-error" data-action="confirm">
+        <span class="confirm-text">Desactivar</span>
+        <span class="confirm-loader loading loading-spinner hidden"></span>
+      </button>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
