@@ -1,0 +1,121 @@
+{% extends "private/auth_base.html" %}
+{% load static %}
+
+{% block title %}Gestión de Proveedores{% endblock %}
+
+{% block content %}
+<!-- Skeleton de carga inicial (pantalla completa) con loading -->
+<div id="initial-skeleton" class="skeleton h-full w-full rounded-lg flex items-center justify-center">
+  <div>
+    <span class="loading loading-bars w-16 h-16"></span>
+    <span class="block text-center text-base-content/50 text-sm">Cargando</span>
+  </div>
+</div>
+
+<!-- Contenido de la aplicación (oculto inicialmente) -->
+<div id="app-content" class="hidden p-0 sm:p-4">
+  <!-- Header -->
+  <div class="items-center bg-base-100 rounded-lg text-center gap-4 mb-6 p-4 sm:flex sm:text-left border border-base-400">
+    <div>
+      <h1 class="text-2xl font-bold">Proveedores</h1>
+      <p class="text-base-content/70 text-sm">Administra los proveedores de tu negocio</p>
+    </div>
+  </div>
+
+  <!-- Barra de búsqueda y acciones -->
+  <div>
+    <div class="flex flex-col sm:flex-row gap-3 p-3 bg-base-100 border border-b-0 border-base-400 rounded-t-lg">
+      <!-- Buscador -->
+      <div class="flex-1">
+        <div class="relative">
+          <label class="input w-full">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-base-content/50"></i>
+            <input type="text" id="search-input" placeholder="Buscar proveedor..." class="pl-10" />
+          </label>
+        </div>
+      </div>
+
+      <div class="flex gap-2">
+        <div>
+          {% include 'private/suppliers/modal-create.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estados -->
+  <div id="loading-container" class="hidden">
+    <div class="card bg-base-100 border border-base-400">
+      <div class="card-body">
+        <div class="flex items-center justify-center gap-3 py-8">
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="container" class="hidden">
+    <div class="card bg-base-100 border border-base-400 rounded-t-none rounded-b-lg">
+      <div class="card-body p-0">
+        <div class="hidden lg:block overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Proveedor</th>
+                <th>Contacto</th>
+                <th>Información</th>
+                <th class="text-center w-32" data-permission-any="suppliers.edit,suppliers.delete">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+        <div class="lg:hidden divide-y divide-base-300" id="cards-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="empty-state" class="hidden">
+    <div class="card bg-base-100 border border-base-400 rounded-t-none rounded-b-lg">
+      <div class="card-body items-center text-center">
+        <i data-lucide="archive-x" class="w-12 h-12 text-base-content/30"></i>
+        <h3 class="text-xl font-semibold" id="empty-title">No hay datos</h3>
+        <p class="text-base-content/70" id="empty-message">
+          No hay proveedores registrados
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="error-state" class="hidden">
+    <div class="alert alert-error">
+      <i data-lucide="alert-circle" class="w-5 h-5"></i>
+      <div>
+        <h3 class="font-bold">Error al cargar proveedores</h3>
+        <p class="text-sm" id="error-message"></p>
+      </div>
+      <button id="btn-retry" class="btn btn-sm btn-ghost">Reintentar</button>
+    </div>
+  </div>
+</div>
+
+{% include 'private/suppliers/modal-edit.html' %}
+{% include 'private/suppliers/modal-delete.html' %}
+
+<!-- Vista centrada cuando no hay permisos -->
+<div id="no-permission-state" class="hidden">
+  <section class="min-h-[70vh] grid place-items-center">
+    <div class="text-center items-center flex flex-col">
+      <i data-lucide="shield-user" class="w-24 h-24 opacity-30 mb-6"></i>
+      <h2 class="text-2xl font-bold mb-2">Sin permisos</h2>
+      <p class="text-base-content/70">No tienes permisos para ver esta sección.</p>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'private/js/api/suppliers.js' %}"></script>
+<!-- ES Modules -->
+<script type="module" src="{% static 'private/js/suppliers/index.js' %}"></script>
+{% endblock %}

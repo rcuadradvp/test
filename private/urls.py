@@ -1,6 +1,8 @@
 # frontend/private/urls.py
 from django.urls import path
 from . import views
+from . import suppliers_views 
+from . import products_views
 
 app_name = 'private'
 
@@ -13,28 +15,29 @@ urlpatterns = [
     path('credit-payments/', views.credit_payments_view, name='credit-payments'),
     
     # Productos no asociados (general - sin departamento ni categoría)
-    path('productos/no-asociados/', views.unassociated_products_view, name='unassociated-products'),
+    path('productos/no-asociados/', products_views.unassociated_products_view, name='unassociated-products'),
     
     # Lista de departamentos
-    path('productos/', views.departments_list_view, name='departments'),
+    path('productos/', products_views.departments_list_view, name='departments'),
     
     # Detalle de producto por UUID
-    path('productos/detalle/<uuid:product_id>/', views.product_detail_view, name='product-detail'),
+    path('productos/detalle/<uuid:product_id>/', products_views.product_detail_view, name='product-detail'),
     
     # Productos sin categoría dentro de un departamento
-    path('productos/<slug:department_slug>/no-asociados/', views.unassociated_category_products_view, name='unassociated-category-products'),
+    path('productos/<slug:department_slug>/no-asociados/', products_views.unassociated_category_products_view, name='unassociated-category-products'),
     
     # Categorías de un departamento
-    path('productos/<slug:department_slug>/', views.categories_detail_view, name='categories-detail'),
+    path('productos/<slug:department_slug>/', products_views.categories_detail_view, name='categories-detail'),
     
     # Productos de una categoría
-    path('productos/<slug:department_slug>/<slug:categories_slug>/', views.products_detail_view, name='products-detail'),
+    path('productos/<slug:department_slug>/<slug:categories_slug>/', products_views.products_detail_view, name='products-detail'),
     
-    # ========== NUEVO: Crear producto ==========
-    path('crear-nuevo-producto/', views.product_create_view, name='product-create'),
-    path('crear-nuevo-producto/<slug:department_slug>/', views.product_create_view, name='product-create-department'),
-    path('crear-nuevo-producto/<slug:department_slug>/<slug:category_slug>/', views.product_create_view, name='product-create-full'),
+    # Crear producto
+    path('crear-nuevo-producto/', products_views.product_create_view, name='product-create'),
+    path('crear-nuevo-producto/<slug:department_slug>/', products_views.product_create_view, name='product-create-department'),
+    path('crear-nuevo-producto/<slug:department_slug>/<slug:category_slug>/', products_views.product_create_view, name='product-create-full'),
     
+    # Clientes
     path('clients/', views.clients_view, name='clients'),
     
     # Páginas de Super Admin (nivel 4+)
@@ -45,9 +48,9 @@ urlpatterns = [
     path('system-config/', views.system_config_view, name='system-config'),
     path('permissions/', views.permissions_view, name='permissions'),
     
-    # Plantilla
-    path('plantilla/', views.template_view, name='plantilla'),
-
     # Gestión de Productos
-    path('gestion-de-productos/', views.product_managment_view, name='product-management'),
+    path('gestion-de-productos/', products_views.product_managment_view, name='product-management'),
+    
+    # ========== PROVEEDORES (NUEVO) ==========
+    path('proveedores/', suppliers_views.suppliers_list_view, name='suppliers'),
 ]
