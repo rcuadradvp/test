@@ -3,6 +3,15 @@
 
 {% block title %}Detalle del Producto{% endblock %}
 
+{% block extra_css %}
+<style>
+/* Hacer todos los checkboxes cuadrados (sin border-radius) */
+.checkbox {
+  border-radius: 0.25rem !important;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 <!-- Skeleton de carga inicial -->
 <div id="initial-skeleton" class="skeleton h-full w-full rounded-lg flex items-center justify-center">
@@ -19,10 +28,6 @@
       <i data-lucide="shield-x" class="w-24 h-24 opacity-30 mb-6"></i>
       <h2 class="text-2xl font-bold mb-2">Acceso denegado</h2>
       <p class="text-base-content/70 mb-6">No tienes permisos para ver esta información.</p>
-      <a href="/productos/" class="btn btn-primary">
-        <i data-lucide="arrow-left" class="w-4 h-4"></i>
-        Volver a productos
-      </a>
     </div>
   </section>
 </div>
@@ -52,7 +57,7 @@
         <h3 class="text-xl font-semibold mb-2">Error al cargar</h3>
         <p id="error-message" class="text-base-content/70 mb-6">Ha ocurrido un error</p>
         <div class="flex gap-2">
-          <button id="btn-retry" class="btn btn-primary">
+          <button type="button" id="btn-retry" class="btn btn-primary">
             <i data-lucide="refresh-cw" class="w-4 h-4"></i>
             Reintentar
           </button>
@@ -72,16 +77,10 @@
       <div class="flex items-center justify-between gap-4">
         <!-- Breadcrumb y título -->
         <div class="flex items-center gap-3 flex-1">
-          <button id="btn-back" class="btn btn-ghost btn-sm btn-square">
+          <button type="button" id="btn-back" class="btn btn-ghost btn-sm btn-square">
             <i data-lucide="arrow-left" class="w-5 h-5"></i>
           </button>
           <div class="flex-1">
-            <div class="text-xs breadcrumbs p-0 mb-1">
-              <ul>
-                <li><a href="/productos/" class="text-base-content/60 hover:text-primary">Productos</a></li>
-                <li class="text-base-content/60">Detalle</li>
-              </ul>
-            </div>
             <h1 id="product-title" class="text-xl font-bold">Cargando...</h1>
           </div>
         </div>
@@ -92,17 +91,17 @@
             <i data-lucide="check-circle" class="w-3 h-3"></i>
             Activo
           </span>
-          <button id="btn-save" class="btn btn-primary btn-sm hidden">
+          <button type="button" id="btn-save" class="btn btn-primary btn-sm hidden">
             <i data-lucide="save" class="w-4 h-4"></i>
             Guardar
           </button>
-          <button id="btn-cancel" class="btn btn-ghost btn-sm hidden">
+          <button type="button" id="btn-cancel" class="btn btn-ghost btn-sm hidden">
             Cancelar
           </button>
-          <button id="btn-edit" class="btn btn-ghost btn-sm">
+          <button type="button" id="btn-edit" class="btn btn-ghost btn-sm">
             <i data-lucide="edit" class="w-4 h-4"></i>
           </button>
-          <button id="btn-delete" class="btn btn-ghost btn-sm text-error">
+          <button type="button" id="btn-delete" class="btn btn-ghost btn-sm text-error">
             <i data-lucide="trash-2" class="w-4 h-4"></i>
           </button>
         </div>
@@ -112,8 +111,9 @@
     <!-- Formulario -->
     <form id="product-form" class="space-y-4">
       
-      <!-- Grid principal: Información básica | Configuración -->
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-4">
+      <!-- Grid principal: Información básica | Proveedores | Configuración -->
+      <!-- En mobile: columnas apiladas | En desktop: 3 columnas -->
+      <div class="grid grid-cols-1 xl:grid-cols-[1fr_380px_280px] gap-4">
         
         <!-- COLUMNA IZQUIERDA: Información básica -->
         <div class="card bg-base-100 border border-base-400">
@@ -220,6 +220,62 @@
           </div>
         </div>
 
+        <!-- COLUMNA CENTRO: Proveedores Asociados -->
+        <div class="card bg-base-100 border border-base-400">
+          <div class="card-body p-4">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-sm flex items-center gap-2">
+                <i data-lucide="truck" class="w-4 h-4 text-primary"></i>
+                Proveedores
+              </h3>
+              <div class="flex gap-2" id="suppliers-actions">
+                <button type="button" id="btn-add-supplier" class="btn btn-primary btn-xs">
+                  <i data-lucide="plus" class="w-3 h-3"></i>
+                  Agregar
+                </button>
+                <button type="button" id="btn-cancel-add" class="btn btn-ghost btn-xs hidden">
+                  Cancelar
+                </button>
+                <button type="button" id="btn-save-suppliers" class="btn btn-primary btn-xs hidden">
+                  <i data-lucide="save" class="w-4 h-4"></i>
+                  Guardar
+                </button>
+                <button type="button" id="btn-delete-selected-suppliers" class="btn btn-error btn-xs btn-disabled" disabled>
+                  <i data-lucide="trash-2" class="w-3 h-3"></i>
+                  Eliminar
+                </button>
+              </div>
+            </div>
+            
+            <!-- Loading skeleton para el card -->
+            <div id="suppliers-loading" class="hidden">
+              <div class="flex flex-col items-center justify-center py-12 gap-3">
+                <span class="loading loading-bars w-12 h-12"></span>
+                <span class="text-base-content/50 text-xs" id="suppliers-loading-message">Cargando...</span>
+              </div>
+            </div>
+            
+            <!-- Tabla de proveedores -->
+            <div id="suppliers-content" class="overflow-x-auto">
+              <table class="table table-xs">
+                <thead>
+                  <tr>
+                    <th>Proveedor</th>
+                    <th class="w-16 text-center">Acción</th>
+                  </tr>
+                </thead>
+                <tbody id="suppliers-table-body">
+                  <tr>
+                    <td colspan="2" class="text-center py-8">
+                      <span class="loading loading-spinner loading-sm"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
         <!-- COLUMNA DERECHA: Configuración (ancho fijo 280px en desktop) -->
         <div class="card bg-base-100 border border-base-400">
           <div class="card-body p-3">
@@ -297,39 +353,38 @@
                 </label>
               </div>
 
-              <!-- Impuesto adicional (cigarrillos, alcohol, etc.) -->
-              <div class="form-control">
-                <label class="label cursor-pointer py-1 justify-start gap-2">
-                  <input 
-                    type="checkbox" 
-                    id="input-has-extra-tax" 
-                    class="checkbox checkbox-xs checkbox-warning"
-                    disabled
-                  />
-                  <div class="flex-1">
-                    <span class="label-text text-xs font-medium">Impuesto adicional</span>
-                    <p class="text-[9px] text-base-content/50 leading-tight">Alcohol, cigarrillos, etc.</p>
-                  </div>
-                </label>
-              </div>
-
-              <!-- Campo porcentaje impuesto adicional (condicional) -->
-              <div id="field-extra-tax-rate" class="hidden pl-6 pt-1">
-                <div class="flex items-center gap-2">
-                  <input 
-                    type="text" 
-                    inputmode="numeric"
-                    pattern="[0-9]*"
-                    id="input-extra-tax-rate" 
-                    class="input input-bordered input-xs w-16 text-center"
-                    placeholder="0"
-                    maxlength="3"
-                    disabled
-                  />
-                  <span class="text-xs text-base-content/60">% adicional</span>
-                </div>
-              </div>
-
+<div class="form-control">
+  <label class="label cursor-pointer py-1 justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <input 
+        type="checkbox" 
+        id="input-has-extra-tax" 
+        class="checkbox checkbox-xs checkbox-warning"
+        disabled
+      />
+      <div>
+        <span class="label-text text-xs font-medium">Impuesto adicional</span>
+        <p class="text-[9px] text-base-content/50 leading-tight">Alcohol, cigarrillos, etc.</p>
+      </div>
+    </div>
+    <!-- Input porcentaje al lado -->
+    <div id="field-extra-tax-rate" class="hidden">
+      <div class="flex items-center gap-1">
+        <input 
+          type="text" 
+          inputmode="numeric"
+          pattern="[0-9]*"
+          id="input-extra-tax-rate" 
+          class="input input-bordered input-xs w-12 text-center"
+          placeholder="0"
+          maxlength="3"
+          disabled
+        />
+        <span class="text-[9px] text-base-content/60">%</span>
+      </div>
+    </div>
+  </label>
+</div>
               <!-- Separador visual -->
               <div class="divider my-1"></div>
 
@@ -348,19 +403,6 @@
                   </div>
                 </label>
               </div>
-
-              <!-- Fechas (compacto) -->
-              <div class="pt-2 border-t text-[9px] text-base-content/50 space-y-0.5">
-                <div class="flex items-center gap-1">
-                  <i data-lucide="plus-circle" class="w-3 h-3"></i>
-                  <span id="display-created-at">-</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3 h-3"></i>
-                  <span id="display-updated-at">-</span>
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
@@ -575,5 +617,7 @@
 
 {% block page_js %}
 <script src="{% static 'private/js/api/products.js' %}" defer></script>
+<script src="{% static 'private/js/api/suppliers.js' %}" defer></script>
+<script src="{% static 'private/js/api/product-suppliers.js' %}" defer></script>
 <script type="module" src="{% static 'private/js/products/product-detail/index.js' %}"></script>
 {% endblock %}

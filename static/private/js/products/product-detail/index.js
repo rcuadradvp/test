@@ -4,6 +4,7 @@ import { initProductPermissions, assertCanView } from '../permissions.js';
 import { StateManager } from './state-manager.js';
 import { UIRenderer } from './ui-renderer.js';
 import { EventHandlers } from './event-handlers.js';
+import { SuppliersManager } from './suppliers-manager.js';
 
 class ProductDetailApp {
   constructor() {
@@ -20,6 +21,11 @@ class ProductDetailApp {
       btnCancel: document.getElementById('btn-cancel'),
       btnDelete: document.getElementById('btn-delete'),
       btnRetry: document.getElementById('btn-retry'),
+      // Botones de proveedores
+      btnAddSupplier: document.getElementById('btn-add-supplier'),
+      btnCancelAdd: document.getElementById('btn-cancel-add'),
+      btnSaveSuppliers: document.getElementById('btn-save-suppliers'),
+      btnDeleteSelectedSuppliers: document.getElementById('btn-delete-selected-suppliers'),
     };
 
     this.productId = this.elements.appContent?.dataset.productId || null;
@@ -35,6 +41,12 @@ class ProductDetailApp {
       this.ui, 
       window.ProductsAPI,
       this.productId
+    );
+    
+    // Inicializar SuppliersManager
+    this.suppliersManager = new SuppliersManager(
+      this.productId,
+      () => this.reloadSuppliers() // Callback para recargar solo proveedores
     );
     
     this.state.subscribe((newState, oldState) => this.onStateChange(newState, oldState));
@@ -76,13 +88,21 @@ class ProductDetailApp {
 
   setupEventListeners() {
     const handlers = this.eventHandlers.getHandlers();
+    const supplierHandlers = this.suppliersManager.getHandlers();
 
+    // Event handlers del producto
     this.elements.btnBack?.addEventListener('click', handlers.onBack);
     this.elements.btnEdit?.addEventListener('click', handlers.onEdit);
     this.elements.btnSave?.addEventListener('click', handlers.onSave);
     this.elements.btnCancel?.addEventListener('click', handlers.onCancel);
     this.elements.btnDelete?.addEventListener('click', handlers.onDelete);
     this.elements.btnRetry?.addEventListener('click', handlers.onRefresh);
+
+    // Event handlers de proveedores
+    this.elements.btnAddSupplier?.addEventListener('click', supplierHandlers.onAdd);
+    this.elements.btnCancelAdd?.addEventListener('click', supplierHandlers.onCancel);
+    this.elements.btnSaveSuppliers?.addEventListener('click', supplierHandlers.onSave);
+    this.elements.btnDeleteSelectedSuppliers?.addEventListener('click', supplierHandlers.onDeleteSelected);
   }
 
   onStateChange(newState, oldState) {
@@ -96,10 +116,35 @@ class ProductDetailApp {
     
     if (newState.product !== oldState.product) {
       this.ui.renderProduct(newState.product, newState.permissions);
+      
+      // Renderizar proveedores asociados
+      if (newState.product?.suppliers) {
+        this.suppliersManager.renderSuppliers(newState.product.suppliers);
+      }
     }
     
     if (newState.permissions !== oldState.permissions) {
       this.ui.updateActionButtons(newState.permissions);
+    }
+  }
+
+  /**
+   * Recarga solo los proveedores del producto sin cambiar el estado de la página
+   * Usado después de agregar o eliminar proveedores
+   */
+  async reloadSuppliers() {
+    try {
+      // Obtener el producto actualizado directamente
+      const product = await window.ProductsAPI.getProductDetail(this.productId);
+      
+      if (product && product.suppliers) {
+        // Solo actualizar los proveedores en el manager
+        // No actualizar el estado completo para evitar recargar toda la página
+        this.suppliersManager.renderSuppliers(product.suppliers);
+      }
+    } catch (error) {
+      console.error('[APP] Error reloading suppliers:', error);
+      MessageHelper?.error('Error al actualizar proveedores');
     }
   }
 }
