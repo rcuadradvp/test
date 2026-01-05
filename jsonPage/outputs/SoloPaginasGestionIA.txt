@@ -1,0 +1,1299 @@
+paginas habilitadas: ['Evidencia de seguridad activa', 'Identificación del controlador RPT', 'Gestión de seguridad activa', 'Retrato de riesgo de seguridad activo', 'RPT de seguridad']
+privilege: ",151,154,153,155,156,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-unknow",
+                        "id": 0,
+                        "lang": "report_subiao_safety_driver_abnormal",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=0"
+                    },
+                    {
+                        "name": "safeAlarm-performance-driver",
+                        "id": 0,
+                        "lang": "safeAlarm_performance_driver",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "driverAbnormal",
+                "id": 0,
+                "lang": "report_subiao_safety_driver_abnormal"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "shubiao-safety-report",
+                        "id": 0,
+                        "lang": "subiao_safety",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-abnormality-report",
+                        "id": 0,
+                        "lang": "subiao_abnormality",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-tire-report",
+                        "id": 0,
+                        "lang": "subiao_tire",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=3"
+                    },
+                    {
+                        "name": "subiao-rear-report",
+                        "id": 0,
+                        "lang": "subiao_rear",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=4"
+                    },
+                    {
+                        "name": "fierce-driving-report",
+                        "id": 0,
+                        "lang": "fierce_driving",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=11"
+                    },
+                    {
+                        "name": "satellite-position-report",
+                        "id": 0,
+                        "lang": "satellite_position",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=12"
+                    },
+                    {
+                        "name": "intelligent-testing-report",
+                        "id": 0,
+                        "lang": "intelligent_testing_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=13"
+                    },
+                    {
+                        "name": "driver-identification-evidence",
+                        "id": 0,
+                        "lang": "driver_identification_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=15"
+                    },
+                    {
+                        "name": "vehicle-operation-monitoring-evidence",
+                        "id": 0,
+                        "lang": "vehicle_operation_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=16"
+                    },
+                    {
+                        "name": "equipment-failure-monitoring-evidence",
+                        "id": 0,
+                        "lang": "equipment_failure_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=17"
+                    },
+                    {
+                        "name": "fierce-driving-io-report",
+                        "id": 0,
+                        "lang": "safety_io",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=fierceDrivingIo"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoSafety",
+                "id": 0,
+                "lang": "subiao_safety"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "subiao-vehicleRiskPortrait",
+                        "id": 0,
+                        "lang": "vehicleRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePortrait.html"
+                    },
+                    {
+                        "name": "subiao-corporateRiskPortrait",
+                        "id": 0,
+                        "lang": "corporateRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/companyPortrait.html"
+                    },
+                    {
+                        "name": "subiao-driverRiskPortrait",
+                        "id": 0,
+                        "lang": "driverRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/driverPortrait.html"
+                    },
+                    {
+                        "name": "subiao-driverGrade-report",
+                        "id": 0,
+                        "lang": "subiao_driverGradeArmSummary",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html"
+                    },
+                    {
+                        "name": "subiao-vehicleGrade-report",
+                        "id": 0,
+                        "lang": "subiao_vehicleGradeArmSummary",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-companyGrade-report",
+                        "id": 0,
+                        "lang": "Enterprise_Score_Report",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-gradeStandard",
+                        "id": 0,
+                        "lang": "grade_standard",
+                        "title": "",
+                        "url": "StatisticalReports/gradeDesciption.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoarmPortrait",
+                "id": 0,
+                "lang": "safetyRiskPortrait"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "subiao-companyConReport",
+                        "id": 0,
+                        "lang": "companyConReport",
+                        "title": "",
+                        "url": "StatisticalReports/companyConReport.html"
+                    },
+                    {
+                        "name": "subiao-companySafetyReport",
+                        "id": 0,
+                        "lang": "companySafetyReport",
+                        "title": "",
+                        "url": "StatisticalReports/companySafetyReport.html"
+                    },
+                    {
+                        "name": "subiao-vehicleSafetyReport",
+                        "id": 0,
+                        "lang": "vehicleSafetyReport",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleSafetyReport.html"
+                    },
+                    {
+                        "name": "subiao-companyComplexReport",
+                        "id": 0,
+                        "lang": "companyComplexReport",
+                        "title": "",
+                        "url": "StatisticalReports/companyComplexReport.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoarmReport",
+                "id": 0,
+                "lang": "safetyReport"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Evidencia de seguridad activa', 'Identificación del controlador RPT', 'Gestión de seguridad activa', 'Retrato de riesgo de seguridad activo']
+privilege: ",151,154,153,155,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-unknow",
+                        "id": 0,
+                        "lang": "report_subiao_safety_driver_abnormal",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=0"
+                    },
+                    {
+                        "name": "safeAlarm-performance-driver",
+                        "id": 0,
+                        "lang": "safeAlarm_performance_driver",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "driverAbnormal",
+                "id": 0,
+                "lang": "report_subiao_safety_driver_abnormal"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "shubiao-safety-report",
+                        "id": 0,
+                        "lang": "subiao_safety",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-abnormality-report",
+                        "id": 0,
+                        "lang": "subiao_abnormality",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-tire-report",
+                        "id": 0,
+                        "lang": "subiao_tire",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=3"
+                    },
+                    {
+                        "name": "subiao-rear-report",
+                        "id": 0,
+                        "lang": "subiao_rear",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=4"
+                    },
+                    {
+                        "name": "fierce-driving-report",
+                        "id": 0,
+                        "lang": "fierce_driving",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=11"
+                    },
+                    {
+                        "name": "satellite-position-report",
+                        "id": 0,
+                        "lang": "satellite_position",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=12"
+                    },
+                    {
+                        "name": "intelligent-testing-report",
+                        "id": 0,
+                        "lang": "intelligent_testing_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=13"
+                    },
+                    {
+                        "name": "driver-identification-evidence",
+                        "id": 0,
+                        "lang": "driver_identification_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=15"
+                    },
+                    {
+                        "name": "vehicle-operation-monitoring-evidence",
+                        "id": 0,
+                        "lang": "vehicle_operation_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=16"
+                    },
+                    {
+                        "name": "equipment-failure-monitoring-evidence",
+                        "id": 0,
+                        "lang": "equipment_failure_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=17"
+                    },
+                    {
+                        "name": "fierce-driving-io-report",
+                        "id": 0,
+                        "lang": "safety_io",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=fierceDrivingIo"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoSafety",
+                "id": 0,
+                "lang": "subiao_safety"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "subiao-vehicleRiskPortrait",
+                        "id": 0,
+                        "lang": "vehicleRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePortrait.html"
+                    },
+                    {
+                        "name": "subiao-corporateRiskPortrait",
+                        "id": 0,
+                        "lang": "corporateRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/companyPortrait.html"
+                    },
+                    {
+                        "name": "subiao-driverRiskPortrait",
+                        "id": 0,
+                        "lang": "driverRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/driverPortrait.html"
+                    },
+                    {
+                        "name": "subiao-driverGrade-report",
+                        "id": 0,
+                        "lang": "subiao_driverGradeArmSummary",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html"
+                    },
+                    {
+                        "name": "subiao-vehicleGrade-report",
+                        "id": 0,
+                        "lang": "subiao_vehicleGradeArmSummary",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-companyGrade-report",
+                        "id": 0,
+                        "lang": "Enterprise_Score_Report",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-gradeStandard",
+                        "id": 0,
+                        "lang": "grade_standard",
+                        "title": "",
+                        "url": "StatisticalReports/gradeDesciption.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoarmPortrait",
+                "id": 0,
+                "lang": "safetyRiskPortrait"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Evidencia de seguridad activa', 'Identificación del controlador RPT', 'Gestión de seguridad activa']
+privilege: ",151,154,153,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-unknow",
+                        "id": 0,
+                        "lang": "report_subiao_safety_driver_abnormal",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=0"
+                    },
+                    {
+                        "name": "safeAlarm-performance-driver",
+                        "id": 0,
+                        "lang": "safeAlarm_performance_driver",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "driverAbnormal",
+                "id": 0,
+                "lang": "report_subiao_safety_driver_abnormal"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "shubiao-safety-report",
+                        "id": 0,
+                        "lang": "subiao_safety",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-abnormality-report",
+                        "id": 0,
+                        "lang": "subiao_abnormality",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-tire-report",
+                        "id": 0,
+                        "lang": "subiao_tire",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=3"
+                    },
+                    {
+                        "name": "subiao-rear-report",
+                        "id": 0,
+                        "lang": "subiao_rear",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=4"
+                    },
+                    {
+                        "name": "fierce-driving-report",
+                        "id": 0,
+                        "lang": "fierce_driving",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=11"
+                    },
+                    {
+                        "name": "satellite-position-report",
+                        "id": 0,
+                        "lang": "satellite_position",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=12"
+                    },
+                    {
+                        "name": "intelligent-testing-report",
+                        "id": 0,
+                        "lang": "intelligent_testing_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=13"
+                    },
+                    {
+                        "name": "driver-identification-evidence",
+                        "id": 0,
+                        "lang": "driver_identification_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=15"
+                    },
+                    {
+                        "name": "vehicle-operation-monitoring-evidence",
+                        "id": 0,
+                        "lang": "vehicle_operation_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=16"
+                    },
+                    {
+                        "name": "equipment-failure-monitoring-evidence",
+                        "id": 0,
+                        "lang": "equipment_failure_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=17"
+                    },
+                    {
+                        "name": "fierce-driving-io-report",
+                        "id": 0,
+                        "lang": "safety_io",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=fierceDrivingIo"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoSafety",
+                "id": 0,
+                "lang": "subiao_safety"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Evidencia de seguridad activa', 'Identificación del controlador RPT']
+privilege: ",151,154,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-unknow",
+                        "id": 0,
+                        "lang": "report_subiao_safety_driver_abnormal",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=0"
+                    },
+                    {
+                        "name": "safeAlarm-performance-driver",
+                        "id": 0,
+                        "lang": "safeAlarm_performance_driver",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "driverAbnormal",
+                "id": 0,
+                "lang": "report_subiao_safety_driver_abnormal"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "shubiao-safety-report",
+                        "id": 0,
+                        "lang": "subiao_safety",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-abnormality-report",
+                        "id": 0,
+                        "lang": "subiao_abnormality",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-tire-report",
+                        "id": 0,
+                        "lang": "subiao_tire",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=3"
+                    },
+                    {
+                        "name": "subiao-rear-report",
+                        "id": 0,
+                        "lang": "subiao_rear",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=4"
+                    },
+                    {
+                        "name": "fierce-driving-report",
+                        "id": 0,
+                        "lang": "fierce_driving",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=11"
+                    },
+                    {
+                        "name": "satellite-position-report",
+                        "id": 0,
+                        "lang": "satellite_position",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=12"
+                    },
+                    {
+                        "name": "intelligent-testing-report",
+                        "id": 0,
+                        "lang": "intelligent_testing_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=13"
+                    },
+                    {
+                        "name": "driver-identification-evidence",
+                        "id": 0,
+                        "lang": "driver_identification_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=15"
+                    },
+                    {
+                        "name": "vehicle-operation-monitoring-evidence",
+                        "id": 0,
+                        "lang": "vehicle_operation_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=16"
+                    },
+                    {
+                        "name": "equipment-failure-monitoring-evidence",
+                        "id": 0,
+                        "lang": "equipment_failure_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=17"
+                    },
+                    {
+                        "name": "fierce-driving-io-report",
+                        "id": 0,
+                        "lang": "safety_io",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=fierceDrivingIo"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoSafety",
+                "id": 0,
+                "lang": "subiao_safety"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Evidencia de seguridad activa']
+privilege: ",151,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "shubiao-safety-report",
+                        "id": 0,
+                        "lang": "subiao_safety",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-abnormality-report",
+                        "id": 0,
+                        "lang": "subiao_abnormality",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-tire-report",
+                        "id": 0,
+                        "lang": "subiao_tire",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=3"
+                    },
+                    {
+                        "name": "subiao-rear-report",
+                        "id": 0,
+                        "lang": "subiao_rear",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=4"
+                    },
+                    {
+                        "name": "fierce-driving-report",
+                        "id": 0,
+                        "lang": "fierce_driving",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=11"
+                    },
+                    {
+                        "name": "satellite-position-report",
+                        "id": 0,
+                        "lang": "satellite_position",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=12"
+                    },
+                    {
+                        "name": "intelligent-testing-report",
+                        "id": 0,
+                        "lang": "intelligent_testing_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=13"
+                    },
+                    {
+                        "name": "driver-identification-evidence",
+                        "id": 0,
+                        "lang": "driver_identification_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=15"
+                    },
+                    {
+                        "name": "vehicle-operation-monitoring-evidence",
+                        "id": 0,
+                        "lang": "vehicle_operation_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=16"
+                    },
+                    {
+                        "name": "equipment-failure-monitoring-evidence",
+                        "id": 0,
+                        "lang": "equipment_failure_monitoring_evidence_center",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=17"
+                    },
+                    {
+                        "name": "fierce-driving-io-report",
+                        "id": 0,
+                        "lang": "safety_io",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=fierceDrivingIo"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoSafety",
+                "id": 0,
+                "lang": "subiao_safety"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Identificación del controlador RPT']
+privilege: ",154,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-unknow",
+                        "id": 0,
+                        "lang": "report_subiao_safety_driver_abnormal",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=0"
+                    },
+                    {
+                        "name": "safeAlarm-performance-driver",
+                        "id": 0,
+                        "lang": "safeAlarm_performance_driver",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "driverAbnormal",
+                "id": 0,
+                "lang": "report_subiao_safety_driver_abnormal"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Gestión de seguridad activa']
+privilege: ",153,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Retrato de riesgo de seguridad activo']
+privilege: ",155,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "subiao-vehicleRiskPortrait",
+                        "id": 0,
+                        "lang": "vehicleRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePortrait.html"
+                    },
+                    {
+                        "name": "subiao-corporateRiskPortrait",
+                        "id": 0,
+                        "lang": "corporateRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/companyPortrait.html"
+                    },
+                    {
+                        "name": "subiao-driverRiskPortrait",
+                        "id": 0,
+                        "lang": "driverRiskPortrait",
+                        "title": "",
+                        "url": "StatisticalReports/driverPortrait.html"
+                    },
+                    {
+                        "name": "subiao-driverGrade-report",
+                        "id": 0,
+                        "lang": "subiao_driverGradeArmSummary",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html"
+                    },
+                    {
+                        "name": "subiao-vehicleGrade-report",
+                        "id": 0,
+                        "lang": "subiao_vehicleGradeArmSummary",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html?objectType=1"
+                    },
+                    {
+                        "name": "subiao-companyGrade-report",
+                        "id": 0,
+                        "lang": "Enterprise_Score_Report",
+                        "title": "",
+                        "url": "StatisticalReports/driverGradeSummary_subiao.html?objectType=2"
+                    },
+                    {
+                        "name": "subiao-gradeStandard",
+                        "id": 0,
+                        "lang": "grade_standard",
+                        "title": "",
+                        "url": "StatisticalReports/gradeDesciption.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoarmPortrait",
+                "id": 0,
+                "lang": "safetyRiskPortrait"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['RPT de seguridad']
+privilege: ",156,50,15,662,680,"
+paginas:
+[
+    {
+        "privi": 27,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "safeAlarmHandle",
+                        "id": 0,
+                        "lang": "safetyHandle",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=7"
+                    },
+                    {
+                        "name": "safeAlarm_performance",
+                        "id": 0,
+                        "lang": "safeAlarm_performance",
+                        "title": "",
+                        "url": "StatisticalReports/safeAlarm_performance.html"
+                    },
+                    {
+                        "name": "alarmFalsePositiveQuery",
+                        "id": 0,
+                        "lang": "alarm_false_positive_query",
+                        "title": "",
+                        "url": "StatisticalReports/alarmFalsePositiveQuery/alarmFalsePositiveQuery.html"
+                    },
+                    {
+                        "name": "ticketHandle",
+                        "id": 0,
+                        "lang": "ticket_handle",
+                        "title": "",
+                        "url": "StatisticalReports/ticketHandle/ticketHandle.html"
+                    },
+                    {
+                        "name": "ticketFile",
+                        "id": 0,
+                        "lang": "ticket_file",
+                        "title": "",
+                        "url": "StatisticalReports/ticketFile/ticketFile.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoAlarmHandle",
+                "id": 271,
+                "ancestors": "27",
+                "lang": "safetyHandle"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "subiao-companyConReport",
+                        "id": 0,
+                        "lang": "companyConReport",
+                        "title": "",
+                        "url": "StatisticalReports/companyConReport.html"
+                    },
+                    {
+                        "name": "subiao-companySafetyReport",
+                        "id": 0,
+                        "lang": "companySafetyReport",
+                        "title": "",
+                        "url": "StatisticalReports/companySafetyReport.html"
+                    },
+                    {
+                        "name": "subiao-vehicleSafetyReport",
+                        "id": 0,
+                        "lang": "vehicleSafetyReport",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleSafetyReport.html"
+                    },
+                    {
+                        "name": "subiao-companyComplexReport",
+                        "id": 0,
+                        "lang": "companyComplexReport",
+                        "title": "",
+                        "url": "StatisticalReports/companyComplexReport.html"
+                    }
+                ],
+                "title": "",
+                "name": "subiaoarmReport",
+                "id": 0,
+                "lang": "safetyReport"
+            }
+        ],
+        "url": "SafeDashboardManagement/SafetyManagement.html",
+        "name": "safety",
+        "id": 0
+    }
+]

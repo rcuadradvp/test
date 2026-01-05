@@ -1,0 +1,66 @@
+
+
+paginas habilitadas: ['Pantalla de nube inteligente', 'Pantalla de nube de seguridad', 'Operate Screen', 'Security Screen', 'Operate Screen(3D)', 'Security Screen(3D)', 'Combination large screen']
+privilege: ",19,20,170,171,173,174,178,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube inteligente', 'Pantalla de nube de seguridad', 'Operate Screen', 'Security Screen', 'Operate Screen(3D)', 'Security Screen(3D)']
+privilege: ",19,20,170,171,173,174,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube inteligente', 'Pantalla de nube de seguridad', 'Operate Screen', 'Security Screen', 'Operate Screen(3D)']
+privilege: ",19,20,170,171,173,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube inteligente', 'Pantalla de nube de seguridad', 'Operate Screen', 'Security Screen']
+privilege: ",19,20,170,171,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube inteligente', 'Pantalla de nube de seguridad', 'Operate Screen']
+privilege: ",19,20,170,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube inteligente', 'Pantalla de nube de seguridad']
+privilege: ",19,20,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube inteligente']
+privilege: ",19,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Pantalla de nube de seguridad']
+privilege: ",20,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Operate Screen']
+privilege: ",170,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Security Screen']
+privilege: ",171,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Operate Screen(3D)']
+privilege: ",173,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Security Screen(3D)']
+privilege: ",174,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Combination large screen']
+privilege: ",178,50,662,680,"
+paginas:
+[]

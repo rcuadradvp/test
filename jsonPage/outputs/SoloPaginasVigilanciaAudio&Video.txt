@@ -1,0 +1,164 @@
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional', 'Monitor de Audio', 'Capturar Frente', 'Control PTZ', 'Video en Vivo', 'Luces encendidas o apagadas', 'Usar transmisión']
+privilege: ",621,630,622,623,624,625,626,627,628,629,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional', 'Monitor de Audio', 'Capturar Frente', 'Control PTZ', 'Video en Vivo', 'Luces encendidas o apagadas']
+privilege: ",621,630,622,623,624,625,626,627,628,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional', 'Monitor de Audio', 'Capturar Frente', 'Control PTZ', 'Video en Vivo']
+privilege: ",621,630,622,623,624,625,626,627,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional', 'Monitor de Audio', 'Capturar Frente', 'Control PTZ']
+privilege: ",621,630,622,623,624,625,626,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional', 'Monitor de Audio', 'Capturar Frente']
+privilege: ",621,630,622,623,624,625,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional', 'Monitor de Audio']
+privilege: ",621,630,622,623,624,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido', 'Intercomunicador bidireccional']
+privilege: ",621,630,622,623,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video', 'Reproducción de Sonido']
+privilege: ",621,630,622,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video', 'Sol. de video']
+privilege: ",621,630,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Video']
+privilege: ",621,50,7,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Sol. de video']
+privilege: ",630,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Reproducción de Sonido']
+privilege: ",622,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Intercomunicador bidireccional']
+privilege: ",623,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Monitor de Audio']
+privilege: ",624,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Capturar Frente']
+privilege: ",625,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Control PTZ']
+privilege: ",626,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Video en Vivo']
+privilege: ",627,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Luces encendidas o apagadas']
+privilege: ",628,50,7,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Usar transmisión']
+privilege: ",629,50,7,662,680,"
+paginas:
+[]

@@ -1,0 +1,35 @@
+paginas habilitadas: ['Panel de control diario', 'Panel de AI']
+privilege: ",161,162,50,16,662,680,"
+paginas:
+[
+    {
+        "privi": 24,
+        "url": "SafeDashboardManagement/SafeDashboard2",
+        "name": "safeDashboard",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Panel de AI']
+privilege: ",162,50,16,662,680,"
+paginas:
+[
+    {
+        "privi": 24,
+        "url": "SafeDashboardManagement/SafeDashboard2",
+        "name": "safeDashboard",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Panel de control diario']
+privilege: ",161,50,16,662,680,"
+paginas:
+[
+    {
+        "privi": 24,
+        "url": "SafeDashboardManagement/SafeDashboard2",
+        "name": "safeDashboard",
+        "id": 0
+    }
+]

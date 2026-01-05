@@ -1,0 +1,114 @@
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento', 'Otro Control (Apagar Combustible, Poder, etc.)', 'Control Wifi', 'Configuración de aceite', 'Enviar Mensajes', 'Configuración del nivel de agua', 'Meter Control']
+privilege: ",651,652,682,653,654,655,659,657,658,656,660,2050,50,2,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento', 'Otro Control (Apagar Combustible, Poder, etc.)', 'Control Wifi', 'Configuración de aceite', 'Enviar Mensajes', 'Configuración del nivel de agua']
+privilege: ",651,652,682,653,654,655,659,657,658,656,660,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento', 'Otro Control (Apagar Combustible, Poder, etc.)', 'Control Wifi', 'Configuración de aceite', 'Enviar Mensajes']
+privilege: ",651,652,682,653,654,655,659,657,658,656,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento', 'Otro Control (Apagar Combustible, Poder, etc.)', 'Control Wifi', 'Configuración de aceite']
+privilege: ",651,652,682,653,654,655,659,657,658,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento', 'Otro Control (Apagar Combustible, Poder, etc.)', 'Control Wifi']
+privilege: ",651,652,682,653,654,655,659,657,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento', 'Otro Control (Apagar Combustible, Poder, etc.)']
+privilege: ",651,652,682,653,654,655,659,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes', 'Config. Sensor de Movimiento']
+privilege: ",651,652,682,653,654,655,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota', 'Configurar Redes']
+privilege: ",651,652,682,653,654,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática', 'Actualización Remota']
+privilege: ",651,652,682,653,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo', 'Actualización automática']
+privilege: ",651,652,682,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros', 'Ver Dispositivo']
+privilege: ",651,652,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de Parametros']
+privilege: ",651,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Ver Dispositivo']
+privilege: ",652,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Actualización automática']
+privilege: ",682,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Actualización Remota']
+privilege: ",653,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configurar Redes']
+privilege: ",654,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Config. Sensor de Movimiento']
+privilege: ",655,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Otro Control (Apagar Combustible, Poder, etc.)']
+privilege: ",659,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Control Wifi']
+privilege: ",657,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuración de aceite']
+privilege: ",658,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Enviar Mensajes']
+privilege: ",656,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuración del nivel de agua']
+privilege: ",660,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Meter Control']
+privilege: ",2050,50,2,662,680,"
+paginas:
+[]

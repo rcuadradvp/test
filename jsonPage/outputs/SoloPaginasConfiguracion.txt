@@ -1,0 +1,1444 @@
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir', 'Asegurador', 'Gestión de mantenimiento', 'Aviso de anuncio', 'Common Use', 'Service Expiration Date Modification', 'Gestion Mantenciones']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,39,321,903,909,646,888,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            },
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            },
+            {
+                "name": "AllVehicleRepair",
+                "id": 0,
+                "lang": "vehicle_repair",
+                "title": "",
+                "url": "OperationManagement/AllVehicleRepair.html"
+            },
+            {
+                "name": "AnnouncementNotice",
+                "id": 0,
+                "lang": "Announcement_Notice",
+                "title": "",
+                "url": "OperationManagement/AnnouncementNotice.html"
+            },
+            {
+                "name": "AllUpkeepInfo",
+                "id": 0,
+                "lang": "upkeep_manage",
+                "title": "",
+                "url": "OperationManagement/UpkeepManage/AllUpkeepInfo.html"
+            },
+            {
+                "name": "commonUseFunction",
+                "id": 0,
+                "lang": "commonUseFunction",
+                "title": "",
+                "url": "OperationManagement/commonUseFunction/AllFunction.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir', 'Asegurador', 'Gestión de mantenimiento', 'Aviso de anuncio', 'Common Use', 'Service Expiration Date Modification']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,39,321,903,909,646,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            },
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            },
+            {
+                "name": "AllVehicleRepair",
+                "id": 0,
+                "lang": "vehicle_repair",
+                "title": "",
+                "url": "OperationManagement/AllVehicleRepair.html"
+            },
+            {
+                "name": "AnnouncementNotice",
+                "id": 0,
+                "lang": "Announcement_Notice",
+                "title": "",
+                "url": "OperationManagement/AnnouncementNotice.html"
+            },
+            {
+                "name": "commonUseFunction",
+                "id": 0,
+                "lang": "commonUseFunction",
+                "title": "",
+                "url": "OperationManagement/commonUseFunction/AllFunction.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir', 'Asegurador', 'Gestión de mantenimiento', 'Aviso de anuncio', 'Common Use']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,39,321,903,909,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            },
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            },
+            {
+                "name": "AllVehicleRepair",
+                "id": 0,
+                "lang": "vehicle_repair",
+                "title": "",
+                "url": "OperationManagement/AllVehicleRepair.html"
+            },
+            {
+                "name": "AnnouncementNotice",
+                "id": 0,
+                "lang": "Announcement_Notice",
+                "title": "",
+                "url": "OperationManagement/AnnouncementNotice.html"
+            },
+            {
+                "name": "commonUseFunction",
+                "id": 0,
+                "lang": "commonUseFunction",
+                "title": "",
+                "url": "OperationManagement/commonUseFunction/AllFunction.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir', 'Asegurador', 'Gestión de mantenimiento', 'Aviso de anuncio']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,39,321,903,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            },
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            },
+            {
+                "name": "AllVehicleRepair",
+                "id": 0,
+                "lang": "vehicle_repair",
+                "title": "",
+                "url": "OperationManagement/AllVehicleRepair.html"
+            },
+            {
+                "name": "AnnouncementNotice",
+                "id": 0,
+                "lang": "Announcement_Notice",
+                "title": "",
+                "url": "OperationManagement/AnnouncementNotice.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir', 'Asegurador', 'Gestión de mantenimiento']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,39,321,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            },
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            },
+            {
+                "name": "AllVehicleRepair",
+                "id": 0,
+                "lang": "vehicle_repair",
+                "title": "",
+                "url": "OperationManagement/AllVehicleRepair.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir', 'Asegurador']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,39,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            },
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM', 'Licencias de Conducir']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,319,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            },
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo', 'Tarjeta SIM']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,34,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            },
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa', 'Dispositivo']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,35,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            },
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol', 'Empresa']
+privilege: ",36,48,47,49,644,643,38,37,33,32,31,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            },
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario', 'Rol']
+privilege: ",36,48,47,49,644,643,38,37,33,32,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            },
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor', 'Usuario']
+privilege: ",36,48,47,49,644,643,38,37,33,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            },
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo', 'Conductor']
+privilege: ",36,48,47,49,644,643,38,37,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            },
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add', 'Grupo']
+privilege: ",36,48,47,49,644,643,38,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            },
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes', 'Cargo Add']
+privilege: ",36,48,47,49,644,643,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover', 'Importar y modificar por lotes']
+privilege: ",36,48,47,49,644,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo', 'Vehículo Remover']
+privilege: ",36,48,47,49,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo', 'Agregar vehículo']
+privilege: ",36,48,47,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo', 'Revisión del vehículo']
+privilege: ",36,48,50,2,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Consulta del vehículo']
+privilege: ",36,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleInfo",
+                "id": 0,
+                "lang": "vehicle_information",
+                "title": "",
+                "url": "OperationManagement/AllVehicleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Revisión del vehículo']
+privilege: ",48,50,2,3,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Agregar vehículo']
+privilege: ",47,50,2,3,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Vehículo Remover']
+privilege: ",49,50,2,3,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Importar y modificar por lotes']
+privilege: ",644,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Cargo Add']
+privilege: ",643,50,662,680,"
+paginas:
+[]
+
+
+paginas habilitadas: ['Grupo']
+privilege: ",38,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "VehicleTeamZtree",
+                "id": 0,
+                "lang": "vehiTeam_management",
+                "title": "",
+                "url": "OperationManagement/VehicleTeam_ztree.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Conductor']
+privilege: ",37,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllDriverInfo",
+                "id": 0,
+                "lang": "driverInfo",
+                "title": "",
+                "url": "OperationManagement/AllDriverInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Usuario']
+privilege: ",33,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllUserInfo",
+                "id": 0,
+                "lang": "user_information",
+                "title": "",
+                "url": "OperationManagement/AllUserInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Rol']
+privilege: ",32,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllRoleInfo",
+                "id": 0,
+                "lang": "role_management",
+                "title": "",
+                "url": "OperationManagement/AllRoleInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Empresa']
+privilege: ",31,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllCompanyInfo",
+                "id": 0,
+                "lang": "company_information",
+                "title": "",
+                "url": "OperationManagement/AllCompanyInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Dispositivo']
+privilege: ",35,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllDeviceInfo",
+                "id": 0,
+                "lang": "device_management",
+                "title": "",
+                "url": "OperationManagement/AllDeviceInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Tarjeta SIM']
+privilege: ",34,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllSIMInfo",
+                "id": 0,
+                "lang": "SIM_card_information",
+                "title": "",
+                "url": "OperationManagement/AllSIMInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Licencias de Conducir']
+privilege: ",319,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllDrivingCertificate",
+                "id": 0,
+                "lang": "vehicle_drivinglicense",
+                "title": "",
+                "url": "OperationManagement/AllDrivingCertificate.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Asegurador']
+privilege: ",39,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllSafeInfo",
+                "id": 0,
+                "lang": "vehiSafe_management",
+                "title": "",
+                "url": "OperationManagement/AllSafeInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Gestión de mantenimiento']
+privilege: ",321,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllVehicleRepair",
+                "id": 0,
+                "lang": "vehicle_repair",
+                "title": "",
+                "url": "OperationManagement/AllVehicleRepair.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Aviso de anuncio']
+privilege: ",903,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AnnouncementNotice",
+                "id": 0,
+                "lang": "Announcement_Notice",
+                "title": "",
+                "url": "OperationManagement/AnnouncementNotice.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Common Use']
+privilege: ",909,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "commonUseFunction",
+                "id": 0,
+                "lang": "commonUseFunction",
+                "title": "",
+                "url": "OperationManagement/commonUseFunction/AllFunction.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Service Expiration Date Modification']
+privilege: ",646,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Gestion Mantenciones']
+privilege: ",888,50,3,662,680,"
+paginas:
+[
+    {
+        "privi": 3,
+        "listSubPrivi": [
+            {
+                "name": "AllUpkeepInfo",
+                "id": 0,
+                "lang": "upkeep_manage",
+                "title": "",
+                "url": "OperationManagement/UpkeepManage/AllUpkeepInfo.html"
+            }
+        ],
+        "url": "OperationManagement/OperationManagement.html",
+        "name": "yunying",
+        "id": 0
+    }
+]

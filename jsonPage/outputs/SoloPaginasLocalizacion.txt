@@ -1,0 +1,47 @@
+paginas habilitadas: ['Monitoreo de Mapa', 'Mis Mapas']
+privilege: ",613,611,50,1,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "weizhi",
+        "id": 0
+    },
+    {
+        "privi": 31,
+        "url": "",
+        "name": "group_monitor",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Monitoreo de Mapa']
+privilege: ",613,50,1,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "weizhi",
+        "id": 0
+    },
+    {
+        "privi": 31,
+        "url": "",
+        "name": "group_monitor",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Mis Mapas']
+privilege: ",611,50,1,662,680,"
+paginas:
+[
+    {
+        "privi": 25,
+        "url": "LocationManagement/Location",
+        "name": "shipin",
+        "id": 0
+    }
+]

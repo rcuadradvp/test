@@ -1,0 +1,77 @@
+paginas habilitadas: ['Rastreo', 'Reproducir', 'Pista de seguridad']
+privilege: ",631,641,831,50,6,662,680,"
+paginas:
+[
+    {
+        "privi": 26,
+        "url": "SafeDashboardManagement/Playback.html?roleType=1",
+        "name": "playback",
+        "id": 0
+    },
+    {
+        "privi": 32,
+        "url": "",
+        "name": "multi_track",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Rastreo', 'Reproducir']
+privilege: ",631,641,50,6,662,680,"
+paginas:
+[
+    {
+        "privi": 26,
+        "url": "SafeDashboardManagement/Playback.html?roleType=1",
+        "name": "playback",
+        "id": 0
+    },
+    {
+        "privi": 32,
+        "url": "",
+        "name": "multi_track",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Rastreo']
+privilege: ",631,50,6,662,680,"
+paginas:
+[
+    {
+        "privi": 26,
+        "url": "SafeDashboardManagement/Playback.html?roleType=2",
+        "name": "playback",
+        "id": 0
+    },
+    {
+        "privi": 32,
+        "url": "",
+        "name": "multi_track",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reproducir']
+privilege: ",641,50,662,680,"
+paginas:
+[
+    {
+        "privi": 26,
+        "url": "SafeDashboardManagement/Playback.html?roleType=1",
+        "name": "playback",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Pista de seguridad']
+privilege: ",831,50,662,680,"
+paginas:
+[
+    {
+        "privi": 26,
+        "url": "SafeDashboardManagement/Playback.html?roleType=3",
+        "name": "playback",
+        "id": 0
+    }
+]

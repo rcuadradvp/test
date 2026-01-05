@@ -1,0 +1,11 @@
+paginas habilitadas: ['Alarmas IA']
+privilege: ",18,50,662,680,"
+paginas:
+[
+    {
+        "privi": 28,
+        "url": "safety-monitor/safety-monitor.html",
+        "name": "safety_monitor",
+        "id": 0
+    }
+]

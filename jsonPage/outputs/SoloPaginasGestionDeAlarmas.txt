@@ -1,0 +1,37 @@
+paginas habilitadas: ['Enlazar Alarma', 'Protección de Alarma', 'Manejo de Alarma', 'Ventana emergente de alarma']
+privilege: ",661,681,50,"
+paginas:
+[]
+
+paginas habilitadas: ['Enlazar Alarma', 'Protección de Alarma', 'Manejo de Alarma']
+privilege: ",661,50,"
+paginas:
+[]
+
+paginas habilitadas: ['Enlazar Alarma', 'Protección de Alarma']
+privilege: ",661,50,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Enlazar Alarma']
+privilege: ",661,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Ventana emergente de alarma']
+privilege: ",681,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Manejo de Alarma', 'Ventana emergente de alarma']
+privilege: ",681,50,662,"
+paginas:
+[]
+
+paginas habilitadas: ['Enlazar Alarma', 'Protección de Alarma']
+privilege: ",661,50,680,"
+paginas:
+[]
+
+Nota:
+Protección de Alarma y Manejo de Alarma, no se pueden habilitar solos o juntos, solo se pueden habilitar si estan con Enlazar Alarma o Ventana emergente de alarma. 

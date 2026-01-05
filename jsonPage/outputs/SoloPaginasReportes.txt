@@ -1,0 +1,4177 @@
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas', 'Consulta de alarma de clave', 'Geocerca', 'Combustible', 'Temperatura RPT', 'G-Sensor RPT', 'IO Alarm RPT']
+privilege: ",213,211,22,24,224,237,29,2005,215,217,243,950,233,50,2,29,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "key-alarm-detail",
+                        "id": 0,
+                        "lang": "Key_alarm_query",
+                        "title": "",
+                        "url": "StatisticalReports/focus_alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "alarm",
+                "id": 0,
+                "lang": "alarm_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "fence-summary",
+                        "id": 0,
+                        "lang": "report_fence_summary",
+                        "title": "",
+                        "url": "StatisticalReports/fence_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail",
+                        "id": 0,
+                        "lang": "report_fence_detail",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail-plus",
+                        "id": 0,
+                        "lang": "in_and_out_area_detail_report",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail_plus.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "fence",
+                "id": 0,
+                "lang": "report_fence_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "oil-summary",
+                        "id": 0,
+                        "lang": "report_navOilSummary",
+                        "title": "",
+                        "url": "StatisticalReports/oil_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail",
+                        "id": 0,
+                        "lang": "report_navOilTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilException-detail",
+                        "id": 0,
+                        "lang": "report_navOilExceptionDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilException_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-curve",
+                        "id": 0,
+                        "lang": "oilCurveRpt",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrackCurve-page.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-dayMonth-detail",
+                        "id": 0,
+                        "lang": "oildayMonth",
+                        "title": "",
+                        "url": "StatisticalReports/oilFuelDetail-page.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail-statistics",
+                        "id": 0,
+                        "lang": "oilTrackDetailStatistics",
+                        "title": "",
+                        "url": "StatisticalReports/oiltrack_detail_statistics.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "oil",
+                "id": 0,
+                "lang": "report_navOil"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "temp-summary",
+                        "id": 0,
+                        "lang": "report_temp_summary",
+                        "title": "",
+                        "url": "StatisticalReports/temp_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempTrack-detail",
+                        "id": 0,
+                        "lang": "report_temp_detail",
+                        "title": "",
+                        "url": "StatisticalReports/tempTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempException-detail",
+                        "id": 0,
+                        "lang": "report_temp_detailException",
+                        "title": "",
+                        "url": "StatisticalReports/tempException_detail.html?rtype=3&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "temp",
+                "id": 0,
+                "lang": "temp_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "io-summary",
+                        "id": 0,
+                        "lang": "report_io_summary",
+                        "title": "",
+                        "url": "StatisticalReports/io_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "io-detail",
+                        "id": 0,
+                        "lang": "report_io_detail",
+                        "title": "",
+                        "url": "StatisticalReports/io_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "io",
+                "id": 0,
+                "lang": "io_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "g_sensor-summary",
+                        "id": 0,
+                        "lang": "G_SensorTable_Summary",
+                        "title": "",
+                        "url": "StatisticalReports/g_sensor_Alarm_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "g_sensor-detail",
+                        "id": 0,
+                        "lang": "G_SensorTable_Detail",
+                        "title": "",
+                        "url": "StatisticalReports/g_sensor_Alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "gSensor",
+                "id": 0,
+                "lang": "gSensorReport"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas', 'Consulta de alarma de clave', 'Geocerca', 'Combustible', 'Temperatura RPT', 'G-Sensor RPT']
+privilege: ",213,211,22,24,224,237,29,2005,215,217,243,950,50,2,29,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "key-alarm-detail",
+                        "id": 0,
+                        "lang": "Key_alarm_query",
+                        "title": "",
+                        "url": "StatisticalReports/focus_alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "alarm",
+                "id": 0,
+                "lang": "alarm_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "fence-summary",
+                        "id": 0,
+                        "lang": "report_fence_summary",
+                        "title": "",
+                        "url": "StatisticalReports/fence_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail",
+                        "id": 0,
+                        "lang": "report_fence_detail",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail-plus",
+                        "id": 0,
+                        "lang": "in_and_out_area_detail_report",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail_plus.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "fence",
+                "id": 0,
+                "lang": "report_fence_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "oil-summary",
+                        "id": 0,
+                        "lang": "report_navOilSummary",
+                        "title": "",
+                        "url": "StatisticalReports/oil_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail",
+                        "id": 0,
+                        "lang": "report_navOilTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilException-detail",
+                        "id": 0,
+                        "lang": "report_navOilExceptionDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilException_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-curve",
+                        "id": 0,
+                        "lang": "oilCurveRpt",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrackCurve-page.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-dayMonth-detail",
+                        "id": 0,
+                        "lang": "oildayMonth",
+                        "title": "",
+                        "url": "StatisticalReports/oilFuelDetail-page.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail-statistics",
+                        "id": 0,
+                        "lang": "oilTrackDetailStatistics",
+                        "title": "",
+                        "url": "StatisticalReports/oiltrack_detail_statistics.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "oil",
+                "id": 0,
+                "lang": "report_navOil"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "temp-summary",
+                        "id": 0,
+                        "lang": "report_temp_summary",
+                        "title": "",
+                        "url": "StatisticalReports/temp_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempTrack-detail",
+                        "id": 0,
+                        "lang": "report_temp_detail",
+                        "title": "",
+                        "url": "StatisticalReports/tempTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempException-detail",
+                        "id": 0,
+                        "lang": "report_temp_detailException",
+                        "title": "",
+                        "url": "StatisticalReports/tempException_detail.html?rtype=3&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "temp",
+                "id": 0,
+                "lang": "temp_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "g_sensor-summary",
+                        "id": 0,
+                        "lang": "G_SensorTable_Summary",
+                        "title": "",
+                        "url": "StatisticalReports/g_sensor_Alarm_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "g_sensor-detail",
+                        "id": 0,
+                        "lang": "G_SensorTable_Detail",
+                        "title": "",
+                        "url": "StatisticalReports/g_sensor_Alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "gSensor",
+                "id": 0,
+                "lang": "gSensorReport"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas', 'Consulta de alarma de clave', 'Geocerca', 'Combustible', 'Temperatura RPT']
+privilege: ",213,211,22,24,224,237,29,2005,215,217,243,50,2,29,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "key-alarm-detail",
+                        "id": 0,
+                        "lang": "Key_alarm_query",
+                        "title": "",
+                        "url": "StatisticalReports/focus_alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "alarm",
+                "id": 0,
+                "lang": "alarm_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "fence-summary",
+                        "id": 0,
+                        "lang": "report_fence_summary",
+                        "title": "",
+                        "url": "StatisticalReports/fence_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail",
+                        "id": 0,
+                        "lang": "report_fence_detail",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail-plus",
+                        "id": 0,
+                        "lang": "in_and_out_area_detail_report",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail_plus.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "fence",
+                "id": 0,
+                "lang": "report_fence_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "oil-summary",
+                        "id": 0,
+                        "lang": "report_navOilSummary",
+                        "title": "",
+                        "url": "StatisticalReports/oil_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail",
+                        "id": 0,
+                        "lang": "report_navOilTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilException-detail",
+                        "id": 0,
+                        "lang": "report_navOilExceptionDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilException_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-curve",
+                        "id": 0,
+                        "lang": "oilCurveRpt",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrackCurve-page.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-dayMonth-detail",
+                        "id": 0,
+                        "lang": "oildayMonth",
+                        "title": "",
+                        "url": "StatisticalReports/oilFuelDetail-page.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail-statistics",
+                        "id": 0,
+                        "lang": "oilTrackDetailStatistics",
+                        "title": "",
+                        "url": "StatisticalReports/oiltrack_detail_statistics.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "oil",
+                "id": 0,
+                "lang": "report_navOil"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "temp-summary",
+                        "id": 0,
+                        "lang": "report_temp_summary",
+                        "title": "",
+                        "url": "StatisticalReports/temp_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempTrack-detail",
+                        "id": 0,
+                        "lang": "report_temp_detail",
+                        "title": "",
+                        "url": "StatisticalReports/tempTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempException-detail",
+                        "id": 0,
+                        "lang": "report_temp_detailException",
+                        "title": "",
+                        "url": "StatisticalReports/tempException_detail.html?rtype=3&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "temp",
+                "id": 0,
+                "lang": "temp_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas', 'Consulta de alarma de clave', 'Geocerca', 'Combustible']
+privilege: ",213,211,22,24,224,237,29,2005,215,217,50,2,29,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "key-alarm-detail",
+                        "id": 0,
+                        "lang": "Key_alarm_query",
+                        "title": "",
+                        "url": "StatisticalReports/focus_alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "alarm",
+                "id": 0,
+                "lang": "alarm_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "fence-summary",
+                        "id": 0,
+                        "lang": "report_fence_summary",
+                        "title": "",
+                        "url": "StatisticalReports/fence_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail",
+                        "id": 0,
+                        "lang": "report_fence_detail",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail-plus",
+                        "id": 0,
+                        "lang": "in_and_out_area_detail_report",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail_plus.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "fence",
+                "id": 0,
+                "lang": "report_fence_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "oil-summary",
+                        "id": 0,
+                        "lang": "report_navOilSummary",
+                        "title": "",
+                        "url": "StatisticalReports/oil_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail",
+                        "id": 0,
+                        "lang": "report_navOilTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilException-detail",
+                        "id": 0,
+                        "lang": "report_navOilExceptionDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilException_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-curve",
+                        "id": 0,
+                        "lang": "oilCurveRpt",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrackCurve-page.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-dayMonth-detail",
+                        "id": 0,
+                        "lang": "oildayMonth",
+                        "title": "",
+                        "url": "StatisticalReports/oilFuelDetail-page.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail-statistics",
+                        "id": 0,
+                        "lang": "oilTrackDetailStatistics",
+                        "title": "",
+                        "url": "StatisticalReports/oiltrack_detail_statistics.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "oil",
+                "id": 0,
+                "lang": "report_navOil"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas', 'Consulta de alarma de clave', 'Geocerca']
+privilege: ",213,211,22,24,224,237,29,2005,215,50,2,29,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "key-alarm-detail",
+                        "id": 0,
+                        "lang": "Key_alarm_query",
+                        "title": "",
+                        "url": "StatisticalReports/focus_alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "alarm",
+                "id": 0,
+                "lang": "alarm_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "fence-summary",
+                        "id": 0,
+                        "lang": "report_fence_summary",
+                        "title": "",
+                        "url": "StatisticalReports/fence_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail",
+                        "id": 0,
+                        "lang": "report_fence_detail",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail-plus",
+                        "id": 0,
+                        "lang": "in_and_out_area_detail_report",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail_plus.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "fence",
+                "id": 0,
+                "lang": "report_fence_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas', 'Consulta de alarma de clave']
+privilege: ",213,211,22,24,224,237,29,2005,50,2,29,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "key-alarm-detail",
+                        "id": 0,
+                        "lang": "Key_alarm_query",
+                        "title": "",
+                        "url": "StatisticalReports/focus_alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "alarm",
+                "id": 0,
+                "lang": "alarm_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario', 'Alarmas']
+privilege: ",213,211,22,24,224,237,29,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia', 'RET de comportamiento del usuario']
+privilege: ",213,211,22,24,224,237,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea', 'Multimedia']
+privilege: ",213,211,22,24,224,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion', 'En Linea / Fuera de Linea']
+privilege: ",213,211,22,24,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje', 'Reporte de conduccion']
+privilege: ",213,211,22,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo', 'Kilometraje']
+privilege: ",213,211,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            },
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de Manejo']
+privilege: ",213,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "park-summary",
+                        "id": 0,
+                        "lang": "report_park_summary",
+                        "title": "",
+                        "url": "StatisticalReports/park_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "park-detail",
+                        "id": 0,
+                        "lang": "report_park_detail",
+                        "title": "",
+                        "url": "StatisticalReports/park_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-summary",
+                        "id": 0,
+                        "lang": "report_acc_summary",
+                        "title": "",
+                        "url": "StatisticalReports/acc_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "acc-detail",
+                        "id": 0,
+                        "lang": "report_acc_detail",
+                        "title": "",
+                        "url": "StatisticalReports/acc_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "Acc_ignition_day_statistics",
+                        "id": 0,
+                        "lang": "Acc_ignition_day_statistics",
+                        "title": "",
+                        "url": "StatisticalReports/AccIgnitionDayStatistics/AccIgnitionDayStatistics.html"
+                    }
+                ],
+                "title": "",
+                "name": "park",
+                "id": 0,
+                "lang": "report_park_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Kilometraje']
+privilege: ",211,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "licheng-summary",
+                        "id": 0,
+                        "lang": "report_liCheng_summary",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=10"
+                    },
+                    {
+                        "name": "licheng-dayMonth-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_dayMonth_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "licheng-detail",
+                        "id": 0,
+                        "lang": "report_liCheng_detail",
+                        "title": "",
+                        "url": "StatisticalReports/licheng_detailEx.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "report_liCheng_detail_monthly",
+                        "id": 0,
+                        "lang": "report_liCheng_detail_monthly",
+                        "title": "",
+                        "url": "StatisticalReports/pos_analy_unknow.html?pageType=3"
+                    }
+                ],
+                "title": "",
+                "name": "licheng",
+                "id": 0,
+                "lang": "report_licheng_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Reporte de conduccion']
+privilege: ",22,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "drivingBehavior-detail",
+                        "id": 0,
+                        "lang": "report_driving_detail",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "drivingBehavior-summary",
+                        "id": 0,
+                        "lang": "report_driving_summary",
+                        "title": "",
+                        "url": "StatisticalReports/drivingBehavior_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "track-detail",
+                        "id": 0,
+                        "lang": "report_navNormalTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/track_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-summary",
+                        "id": 0,
+                        "lang": "report_overspeed_summary",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "highspeed-detail",
+                        "id": 0,
+                        "lang": "report_overspeed_detail",
+                        "title": "",
+                        "url": "StatisticalReports/highspeed_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle-speeding-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_speeding_summary",
+                        "title": "",
+                        "url": "StatisticalReports/vehicle_speeding_summary.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "driving",
+                "id": 0,
+                "lang": "driving_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['En Linea / Fuera de Linea']
+privilege: ",24,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "login-summary",
+                        "id": 0,
+                        "lang": "report_vehicle_login_sumary",
+                        "title": "",
+                        "url": "StatisticalReports/login_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_login_detail",
+                        "title": "",
+                        "url": "StatisticalReports/login_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "login_report_Statistics",
+                        "id": 0,
+                        "lang": "login_report_Statistics_summary",
+                        "title": "",
+                        "url": "StatisticalReports/loginStatisticsSwitch.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "loginRate-detail",
+                        "id": 0,
+                        "lang": "report_login_rate_detail",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?objectType=6"
+                    },
+                    {
+                        "name": "loginRate_summary",
+                        "id": 0,
+                        "lang": "Summary_table_of_online_rate",
+                        "title": "",
+                        "url": "StatisticalReports/loginRateSummary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicle_offline",
+                        "id": 0,
+                        "lang": "vehicle_offline_report",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleOffline/vehicle_offline.html"
+                    }
+                ],
+                "title": "",
+                "name": "login",
+                "id": 0,
+                "lang": "report_login_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Multimedia']
+privilege: ",224,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "vehiclePhotos-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_photo_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehiclePhotos_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "vehicleAudio-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_audio_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleAudio_detail.html?rtype=1&objectType=1"
+                    },
+                    {
+                        "name": "vehicleVideo-detail",
+                        "id": 0,
+                        "lang": "report_vehicle_video_new",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleVideo_detail.html?rtype=1&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "media",
+                "id": 0,
+                "lang": "report_media"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['RET de comportamiento del usuario']
+privilege: ",237,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "userOnline-summary",
+                        "id": 0,
+                        "lang": "report_userOnline_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "userOnline-detail",
+                        "id": 0,
+                        "lang": "report_userOnline_detail",
+                        "title": "",
+                        "url": "StatisticalReports/userOnline_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "user-log",
+                        "id": 0,
+                        "lang": "user_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=8"
+                    },
+                    {
+                        "name": "userOperation-summary",
+                        "id": 0,
+                        "lang": "report_userOperation_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userOperation_summary.html"
+                    },
+                    {
+                        "name": "userMedia-log",
+                        "id": 0,
+                        "lang": "report_userMedia_log",
+                        "title": "",
+                        "url": "StatisticalReports/swtichVehiNetInPage.html?rtype=2&objectType=9"
+                    },
+                    {
+                        "name": "userMedia-summary",
+                        "id": 0,
+                        "lang": "report_userMedia_summary",
+                        "title": "",
+                        "url": "StatisticalReports/userMedia_summary.html"
+                    },
+                    {
+                        "name": "vehicleModify-detail",
+                        "id": 0,
+                        "lang": "report_vehicleModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/vehicleModify_detail.html?rtype=2"
+                    },
+                    {
+                        "name": "deviceModify-detail",
+                        "id": 0,
+                        "lang": "report_deviceModify_detail",
+                        "title": "",
+                        "url": "StatisticalReports/deviceModify_detail.html"
+                    },
+                    {
+                        "name": "emailPushRecord",
+                        "id": 0,
+                        "lang": "email_push_record",
+                        "title": "",
+                        "url": "StatisticalReports/email_push_record.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "online",
+                "id": 0,
+                "lang": "userOnline_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Alarmas']
+privilege: ",29,50,2,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Consulta de alarma de clave'] (al dejar solo este habilitado se habilita automaticamente alarmas)
+privilege: ",29,50,2,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Geocerca']
+privilege: ",215,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "fence-summary",
+                        "id": 0,
+                        "lang": "report_fence_summary",
+                        "title": "",
+                        "url": "StatisticalReports/fence_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail",
+                        "id": 0,
+                        "lang": "report_fence_detail",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "fence-detail-plus",
+                        "id": 0,
+                        "lang": "in_and_out_area_detail_report",
+                        "title": "",
+                        "url": "StatisticalReports/fence_detail_plus.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "fence",
+                "id": 0,
+                "lang": "report_fence_title"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Combustible']
+privilege: ",217,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "oil-summary",
+                        "id": 0,
+                        "lang": "report_navOilSummary",
+                        "title": "",
+                        "url": "StatisticalReports/oil_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail",
+                        "id": 0,
+                        "lang": "report_navOilTrackDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilException-detail",
+                        "id": 0,
+                        "lang": "report_navOilExceptionDetail",
+                        "title": "",
+                        "url": "StatisticalReports/oilException_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-curve",
+                        "id": 0,
+                        "lang": "oilCurveRpt",
+                        "title": "",
+                        "url": "StatisticalReports/oilTrackCurve-page.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-dayMonth-detail",
+                        "id": 0,
+                        "lang": "oildayMonth",
+                        "title": "",
+                        "url": "StatisticalReports/oilFuelDetail-page.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "oilTrack-detail-statistics",
+                        "id": 0,
+                        "lang": "oilTrackDetailStatistics",
+                        "title": "",
+                        "url": "StatisticalReports/oiltrack_detail_statistics.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "oil",
+                "id": 0,
+                "lang": "report_navOil"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Temperatura RPT']
+privilege: ",243,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "temp-summary",
+                        "id": 0,
+                        "lang": "report_temp_summary",
+                        "title": "",
+                        "url": "StatisticalReports/temp_summary.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempTrack-detail",
+                        "id": 0,
+                        "lang": "report_temp_detail",
+                        "title": "",
+                        "url": "StatisticalReports/tempTrack_detail.html?rtype=3&objectType=1"
+                    },
+                    {
+                        "name": "tempException-detail",
+                        "id": 0,
+                        "lang": "report_temp_detailException",
+                        "title": "",
+                        "url": "StatisticalReports/tempException_detail.html?rtype=3&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "temp",
+                "id": 0,
+                "lang": "temp_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['G-Sensor RPT']
+privilege: ",950,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "g_sensor-summary",
+                        "id": 0,
+                        "lang": "G_SensorTable_Summary",
+                        "title": "",
+                        "url": "StatisticalReports/g_sensor_Alarm_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "g_sensor-detail",
+                        "id": 0,
+                        "lang": "G_SensorTable_Detail",
+                        "title": "",
+                        "url": "StatisticalReports/g_sensor_Alarm_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "gSensor",
+                "id": 0,
+                "lang": "gSensorReport"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['IO Alarm RPT']
+privilege: ",233,50,2,662,680,"
+paginas:
+[
+    {
+        "privi": 2,
+        "subPrivi": [
+            {
+                "listSubPrivi": [
+                    {
+                        "name": "io-summary",
+                        "id": 0,
+                        "lang": "report_io_summary",
+                        "title": "",
+                        "url": "StatisticalReports/io_summary.html?rtype=2&objectType=1"
+                    },
+                    {
+                        "name": "io-detail",
+                        "id": 0,
+                        "lang": "report_io_detail",
+                        "title": "",
+                        "url": "StatisticalReports/io_detail.html?rtype=2&objectType=1"
+                    }
+                ],
+                "title": "",
+                "name": "io",
+                "id": 0,
+                "lang": "io_report"
+            }
+        ],
+        "url": "StatisticalReports/StatisticalReports.html",
+        "name": "tongji",
+        "id": 0
+    }
+]

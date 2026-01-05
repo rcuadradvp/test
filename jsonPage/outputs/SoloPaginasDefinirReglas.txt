@@ -1,0 +1,512 @@
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador', 'Regla de imágenes de tiempos', 'Regla de descarga de Wi-Fi', 'Reglas de tiempo de TTS', 'Customized information release', 'Accesorio', 'Embargo a expirar']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,5-8,5-10,5-30,5-37,5-23,5-38,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador', 'Regla de imágenes de tiempos', 'Regla de descarga de Wi-Fi', 'Reglas de tiempo de TTS', 'Customized information release', 'Accesorio']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,5-8,5-10,5-30,5-37,5-23,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador', 'Regla de imágenes de tiempos', 'Regla de descarga de Wi-Fi', 'Reglas de tiempo de TTS', 'Customized information release']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,5-8,5-10,5-30,5-37,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador', 'Regla de imágenes de tiempos', 'Regla de descarga de Wi-Fi', 'Reglas de tiempo de TTS']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,5-8,5-10,5-30,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador', 'Regla de imágenes de tiempos', 'Regla de descarga de Wi-Fi']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,5-8,5-10,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador', 'Regla de imágenes de tiempos']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,5-8,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas', 'Regla de grabación de temporizador']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,5-9,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma', 'Reglas falsas / positivas']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,5-33,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas', 'Protección de Alarma']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,5-32,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2', 'Recordatorio de manejo de alarmas']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,5-24,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma', 'Nivel de alarma 2']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,5-16,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules', 'Regla de enlace de alarma']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,5-13,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint', 'Cross-regional operating rules']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,5-36,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot', 'Reglas de waypoint']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,5-34,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos', 'Regla de alarma agregada', 'Reglas del hotspot']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,5-28,5-29,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea', 'Regla clave de puntos']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,5-12,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule', 'Regla de compensación de línea']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,5-7,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter', 'Prohibited Leave Rule']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,5-3,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica', 'Prohibited Enter']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,5-2,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad', 'Verificación dinámica']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,5-22,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo', 'Reconocimiento de identidad']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,5-17,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación', 'Fuera de línea anormal a largo plazo']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,5-21,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento', 'Excepción del informe de ubicación']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,5-20,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara', 'Regla de tiempo de espera de estacionamiento']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,5-6,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC', 'Pantalla negra de la cámara']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,5-25,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento', 'Excepción ACC']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,5-19,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal', 'Detección de rebasamiento']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,5-31,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno', 'Posicionamiento anormal']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,5-15,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad', 'Violación de alarma por exceso de velocidad nocturno']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,5-40,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna', 'Violación de alarma de exceso de velocidad']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,5-39,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino', 'Regla de conducción nocturna']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,5-5,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad', 'Regla de aceleración del camino']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,5-14,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área', 'Romper la regla del límite de velocidad']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,5-11,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)', 'Regla de límite de velocidad de área']
+privilege: ",5,677,683,684,685,5-1,5-41,5-4,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga', 'Violación de alarma de conducción por fatiga (conducción única)']
+privilege: ",5,677,683,684,685,5-1,5-41,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Tarea de Actualizacion Remota', 'Regla de fatiga']
+privilege: ",5,677,683,684,685,5-1,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Automatic upgrade task', 'Regla de fatiga']
+privilege: ",5,677,683,684,5-1,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Configuracion de parametros de tareas', 'Regla de fatiga']
+privilege: ",5,677,683,5-1,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Añadir Regla', 'Regla de fatiga']
+privilege: ",5,677,5-1,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Definir Reglas', 'Regla de fatiga']
+privilege: ",5,5-1,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]
+
+paginas habilitadas: ['Añadir Regla']
+privilege: ",677,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Configuracion de parametros de tareas']
+privilege: ",683,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Tarea de Actualizacion Remota']
+privilege: ",684,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Tarea de Actualizacion Remota']
+privilege: ",685,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Definir Reglas', 'Regla de fatiga']
+privilege: ",5,5-1,50,5,662,680,"
+paginas:
+[
+    {
+        "privi": 5,
+        "url": "RulesManagement/RulesManagement.html",
+        "name": "guize",
+        "id": 0
+    }
+]

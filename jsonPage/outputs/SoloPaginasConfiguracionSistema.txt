@@ -1,0 +1,14 @@
+paginas habilitadas: ['Config. de Sistema', 'Config. Video']
+privilege: ",663,664,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Config. de Sistema']
+privilege: ",663,50,662,680,"
+paginas:
+[]
+
+paginas habilitadas: ['Config. Video']
+privilege: ",664,50,662,680,"
+paginas:
+[]
